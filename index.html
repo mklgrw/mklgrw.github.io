@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LayerTWO</title>
+    <meta name="description" content="LayerTWO — the intelligence layer for nutrition, behavior, and health." />
+    <style>
+      :root {
+        --text: #111111;
+        --muted: #6b7280; /* gray-500 */
+        --border: #e5e7eb; /* gray-200 */
+        --maxw: 720px;
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: #ffffff;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 16px;
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Brand in the top-left */
+      .brand {
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .brand .mark {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #111111;
+        display: inline-block;
+      }
+
+      .brand .name {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      /* Centered title area */
+      header {
+        max-width: var(--maxw);
+        margin: 96px auto 24px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* Article column */
+      main {
+        max-width: var(--maxw);
+        padding: 0 20px 120px;
+        margin: 56px auto 0;
+      }
+
+      article p {
+        margin: 0 0 18px;
+      }
+
+      /* Headline-like paragraphs */
+      .headline {
+        font-weight: 800;
+        font-size: 18px;
+        margin-top: 30px;
+        margin-bottom: 12px;
+      }
+
+      /* Subtle list styling */
+      ul {
+        list-style: disc;
+        padding-left: 22px;
+        margin: 6px 0 22px;
+      }
+      li { margin: 6px 0; }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 28px 0;
+      }
+
+      /* Make it feel airy on large screens */
+      @media (min-width: 1024px) {
+        header { margin-top: 120px; }
+        h1 { font-size: 44px; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="brand" href="#" aria-label="LayerTWO">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="name">LayerTWO</span>
+    </a>
+
+    <header>
+      <h1>LayerTWO</h1>
+      <div class="date" id="page-date" aria-label="Date"></div>
+    </header>
+
+    <main>
+      <article>
+        <p>Each major leap in health has come from a better way to understand the human body.</p>
+        <p>Blood tests let us see inside. Wearables made it continuous.</p>
+        <p>But nutrition — the most influential input of all — is still stuck in the dark.</p>
+
+        <p>Today’s tools weren’t built for intelligence. They can’t adapt, anticipate, or understand the real drivers of health.</p>
+        <p>Trackers count steps, calories, or hours of sleep — but they can’t tell you why you’re tired, foggy, or inflamed.</p>
+        <p>They can’t show you how food choices ripple into your energy, mood, recovery, or long-term risk.</p>
+
+        <p>The next leap isn’t just about better sensors or better models.</p>
+        <p>It’s about a new kind of system that understands behavior in context — and turns that understanding into interventions that actually work.</p>
+
+        <p class="headline">We think the future of health is whoever owns the food → behavior → outcome loop.</p>
+        <p>And right now, no one owns it.</p>
+
+        <p class="headline">LayerTWO is the intelligence layer for nutrition, behavior, and health.</p>
+        <p>Our system learns what you eat, when, why, and how much.</p>
+        <p>It models how those choices impact your biology — in real time — and then prescribes proven interventions to help you perform, feel, and live better.</p>
+
+        <p class="headline">It combines:</p>
+        <ul>
+          <li>Closed-loop behavior feedback that links meals to biomarkers and symptoms.</li>
+          <li>Predictive modeling that anticipates fatigue, cravings, or poor sleep before they happen.</li>
+          <li>Research-backed protocols that adapt to your biology and lifestyle.</li>
+        </ul>
+
+        <p>We’re not chasing generic advice.</p>
+        <p>We’re building a precision system that rewires habits with minimal effort — moving people from symptom management to symptom prevention.</p>
+
+        <p>Our first engine serves high-need consumers with “invisible symptoms” like fatigue, brain fog, and bloating that traditional healthcare ignores.</p>
+        <p>Our second engine powers B2B partners — from healthcare providers to CPG brands — to run real-world trials, discover diet–drug interactions, and design products with measurable outcomes.</p>
+
+        <p class="headline">LayerTWO works with you, not around you.</p>
+        <p>It learns from every tracker, every data source, every outcome — getting smarter with each interaction.</p>
+        <p>The more people use it, the more powerful it becomes.</p>
+
+        <p>We’re where applied research meets product design.</p>
+        <p>Our team blends deep AI expertise with a decade of hands-on health optimization.</p>
+        <p>We’ve built machine learning systems from messy real-world behavior, led growth at healthcare startups, and lived the problem we’re solving.</p>
+
+        <p class="headline">The world’s most powerful health models are useless without the right interface to the human body.</p>
+        <p>LayerTWO is that interface.</p>
+        <p>The bridge between what you do and how you feel — between today’s habits and tomorrow’s health.</p>
+      </article>
+    </main>
+
+    <script>
+      // Render a simple formatted date like "Jan 03, 2025"
+      (function () {
+        const el = document.getElementById('page-date');
+        if (!el) return;
+        const now = new Date();
+        const fmt = new Intl.DateTimeFormat(undefined, {
+          month: 'short', day: '2-digit', year: 'numeric',
+        });
+        el.textContent = fmt.format(now);
+      })();
+    </script>
+  </body>
+  </html>
+
+
