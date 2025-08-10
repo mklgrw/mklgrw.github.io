@@ -41,12 +41,10 @@
         color: inherit;
       }
 
-      .brand .mark {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: #111111;
-        display: inline-block;
+      .brand img.logo {
+        height: 28px; /* increased from 18px */
+        width: auto;
+        display: block;
       }
 
       .brand .name {
@@ -116,34 +114,34 @@
   </head>
   <body>
     <a class="brand" href="#" aria-label="LayerTWO">
-      <span class="mark" aria-hidden="true"></span>
+      <img class="logo" src="assets/TransparentLogo.png" alt="LayerTWO logo" />
       <span class="name">LayerTWO</span>
     </a>
 
     <header>
       <h1>LayerTWO</h1>
-      <div class="date" id="page-date" aria-label="Date"></div>
+      <div class="date" id="page-date" aria-label="Date">Jul 23, 2025</div>
     </header>
 
     <main>
       <article>
         <p>Each major leap in health has come from a better way to understand the human body.</p>
         <p>Blood tests let us see inside. Wearables made it continuous.</p>
-        <p>But nutrition — the most influential input of all — is still stuck in the dark.</p>
+        <p>But nutrition, the most influential input of all, is still stuck in the dark.</p>
 
         <p>Today’s tools weren’t built for intelligence. They can’t adapt, anticipate, or understand the real drivers of health.</p>
-        <p>Trackers count steps, calories, or hours of sleep — but they can’t tell you why you’re tired, foggy, or inflamed.</p>
+        <p>Trackers count steps, calories, or hours of sleep, but they can’t tell you why you’re tired, foggy, or inflamed.</p>
         <p>They can’t show you how food choices ripple into your energy, mood, recovery, or long-term risk.</p>
 
         <p>The next leap isn’t just about better sensors or better models.</p>
-        <p>It’s about a new kind of system that understands behavior in context — and turns that understanding into interventions that actually work.</p>
+        <p>It’s about a new kind of system that understands behavior in context, and turns that understanding into interventions that actually work.</p>
 
         <p class="headline">We think the future of health is whoever owns the food → behavior → outcome loop.</p>
         <p>And right now, no one owns it.</p>
 
         <p class="headline">LayerTWO is the intelligence layer for nutrition, behavior, and health.</p>
         <p>Our system learns what you eat, when, why, and how much.</p>
-        <p>It models how those choices impact your biology — in real time — and then prescribes proven interventions to help you perform, feel, and live better.</p>
+        <p>It models how those choices impact your biology, in real time, and then prescribes proven interventions to help you perform, feel, and live better.</p>
 
         <p class="headline">It combines:</p>
         <ul>
@@ -153,13 +151,13 @@
         </ul>
 
         <p>We’re not chasing generic advice.</p>
-        <p>We’re building a precision system that rewires habits with minimal effort — moving people from symptom management to symptom prevention.</p>
+        <p>We’re building a precision system that rewires habits with minimal effort, moving people from symptom management to symptom prevention.</p>
 
         <p>Our first engine serves high-need consumers with “invisible symptoms” like fatigue, brain fog, and bloating that traditional healthcare ignores.</p>
-        <p>Our second engine powers B2B partners — from healthcare providers to CPG brands — to run real-world trials, discover diet–drug interactions, and design products with measurable outcomes.</p>
+        <p>Our second engine powers B2B partners, from healthcare providers to CPG brands, to run real-world trials, discover diet–drug interactions, and design products with measurable outcomes.</p>
 
         <p class="headline">LayerTWO works with you, not around you.</p>
-        <p>It learns from every tracker, every data source, every outcome — getting smarter with each interaction.</p>
+        <p>It learns from every tracker, every data source, every outcome, getting smarter with each interaction.</p>
         <p>The more people use it, the more powerful it becomes.</p>
 
         <p>We’re where applied research meets product design.</p>
@@ -168,22 +166,11 @@
 
         <p class="headline">The world’s most powerful health models are useless without the right interface to the human body.</p>
         <p>LayerTWO is that interface.</p>
-        <p>The bridge between what you do and how you feel — between today’s habits and tomorrow’s health.</p>
+        <p>The bridge between what you do and how you feel, between today’s habits and tomorrow’s health.</p>
       </article>
     </main>
 
-    <script>
-      // Render a simple formatted date like "Jan 03, 2025"
-      (function () {
-        const el = document.getElementById('page-date');
-        if (!el) return;
-        const now = new Date();
-        const fmt = new Intl.DateTimeFormat(undefined, {
-          month: 'short', day: '2-digit', year: 'numeric',
-        });
-        el.textContent = fmt.format(now);
-      })();
-    </script>
+    
   </body>
   </html>
 
