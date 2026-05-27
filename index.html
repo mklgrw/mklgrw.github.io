@@ -1,698 +1,791 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Target slug: /claude-for-legal-configuration (served at root on layertwolab.com) -->
-    <title>Claude for Legal Configuration & Setup — LayerTWO</title>
-    <meta
-      name="description"
-      content="Claude for Legal configuration for litigation firms. We wire it into Filevine, Westlaw, and DocuSign and build your paralegal playbooks. Fixed fee from $950."
-    />
+<!-- ============ SEO ============ -->
+<title>Claude for Legal configuration · LayerTWO</title>
+<meta name="description" content="Claude for Legal configuration for 5–30 attorney litigation firms. Wired into Filevine, Westlaw, iManage, DocuSign, Microsoft 365. From $950 fixed fee.">
+<link rel="canonical" href="https://layertwolab.com/">
+<link rel="icon" href="assets/Transparent.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/TransparentLogo.png">
 
-    <link rel="canonical" href="https://layertwolab.com/" />
-    <link rel="icon" href="assets/Transparent.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/TransparentLogo.png" />
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claude for Legal configuration for litigation firms">
+<meta property="og:description" content="Anthropic launched Claude for Legal on May 13, 2026. We wire it into your Filevine + Westlaw + DocuSign stack. From $950 fixed fee.">
+<meta property="og:url" content="https://layertwolab.com/">
+<meta property="og:image" content="https://layertwolab.com/assets/Transparent.png">
+<meta property="og:site_name" content="LayerTWO">
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Claude for Legal Configuration & Setup — LayerTWO" />
-    <meta
-      property="og:description"
-      content="We configure Claude for Legal into your litigation stack — Filevine, Westlaw, DocuSign — and build your paralegal playbooks. Fixed fee from $950."
-    />
-    <meta property="og:url" content="https://layertwolab.com/" />
-    <meta property="og:image" content="https://layertwolab.com/assets/Transparent.png" />
-    <meta property="og:site_name" content="LayerTWO" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude for Legal configuration for litigation firms">
+<meta name="twitter:description" content="We wire Claude for Legal into your Filevine + Westlaw + DocuSign stack. Fixed fee. Three to five days.">
+<meta name="twitter:image" content="https://layertwolab.com/assets/Transparent.png">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Claude for Legal Configuration & Setup — LayerTWO" />
-    <meta
-      name="twitter:description"
-      content="We configure Claude for Legal into your litigation stack — Filevine, Westlaw, DocuSign. Fixed fee from $950. 3–5 days, not a six-month IT project."
-    />
-    <meta name="twitter:image" content="https://layertwolab.com/assets/Transparent.png" />
+<!-- ============ Schema: Service ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Claude for Legal configuration",
+  "serviceType": "Legal AI configuration and implementation",
+  "provider": { "@type": "Organization", "name": "LayerTWO", "url": "https://layertwolab.com" },
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "audience": { "@type": "Audience", "audienceType": "U.S. litigation firms, 5–30 attorneys" },
+  "description": "Configuration, MCP connector setup, practice-specific playbooks, and paralegal training for Anthropic's Claude for Legal product. Wired into Filevine, Westlaw, iManage, DocuSign, MyCase, and Microsoft 365.",
+  "offers": [
+    { "@type": "Offer", "name": "Configuration sprint", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "950", "maxPrice": "7500", "priceCurrency": "USD" } },
+    { "@type": "Offer", "name": "Ongoing retainer", "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": "150", "maxPrice": "1500", "priceCurrency": "USD", "unitText": "per month" } }
+  ]
+}
+</script>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<!-- ============ Schema: Organization ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LayerTWO",
+  "url": "https://layertwolab.com",
+  "logo": "https://layertwolab.com/assets/TransparentLogo.png"
+}
+</script>
 
-    <!-- Tailwind via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-              ink: '#0f1211',
-              accent: {
-                DEFAULT: '#1f5138', // forest green — primary CTAs only
-                hover: '#19422e',
-              },
-            },
-          },
-        },
-      };
-    </script>
+<!-- ============ Schema: BreadcrumbList ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://layertwolab.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Claude for Legal configuration", "item": "https://layertwolab.com/" }
+  ]
+}
+</script>
 
-    <!-- ============================ JSON-LD ============================ -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "Claude for Legal Configuration",
-        "serviceType": "Claude for Legal configuration, setup, and implementation for law firms",
-        "provider": {
-          "@type": "Organization",
-          "name": "LayerTWO",
-          "url": "https://layertwolab.com/"
-        },
-        "areaServed": { "@type": "Country", "name": "United States" },
-        "description": "Configuration of Anthropic's Claude for Legal into the existing tool stacks of small and mid-size litigation firms — Filevine, Westlaw, iManage, DocuSign, MyCase, Microsoft 365 — plus practice-specific playbooks and paralegal training.",
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "USD",
-          "price": "950",
-          "description": "Fixed-fee configuration sprint from $950, scoped during a free audit. Ongoing retainer $150–$1,500/month."
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "LayerTWO",
-        "url": "https://layertwolab.com/",
-        "logo": "https://layertwolab.com/assets/TransparentLogo.png",
-        "description": "Configuration partner for Claude for Legal. We wire Claude into the tools litigation firms already run and build the playbooks their paralegals use."
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://layertwolab.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Claude for Legal Configuration",
-            "item": "https://layertwolab.com/claude-for-legal-configuration"
-          }
-        ]
-      }
-    </script>
-    <!-- FAQPage JSON-LD: text MUST stay in sync with the visible FAQ section below -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What does Claude for Legal configuration actually do?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Configuration connects Claude for Legal to the tools your firm already runs and turns its general capability into your firm's repeatable workflows. We wire the MCP connectors into Filevine, Westlaw, and DocuSign, then build playbooks for the work you do every day — demand letters, deposition summaries, discovery review, intake. You get a configured system your paralegals use the next morning, not a blank chat box."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Who configures Claude for Legal for small litigation firms?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "We do. LayerTWO configures Claude for Legal specifically for litigation boutiques of 5 to 30 attorneys that have no internal IT team. We handle the connector wiring, the practice-specific playbooks, and the paralegal training, then leave you with documented SOPs. You do not need a developer on staff, and you do not manage the setup yourself during billable hours."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does Claude for Legal compare to Harvey AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Claude for Legal launched May 13, 2026 at roughly $20 per seat per month, against Harvey's reported $1,200 per seat per month — close to a 98% price collapse. For a 12-attorney boutique that difference is tens of thousands of dollars a year. The capability is now within reach of firms that were priced out; configuration, not cost, is the remaining barrier, and that is the part we handle."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do we need to switch case management platforms?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. We configure Claude for Legal around the stack you already run. If your firm is on Filevine, Clio, MyCase, or Litify, we wire Claude into it rather than asking you to migrate. Switching case management mid-stream is expensive and risky, and it is never a precondition for working with us. You keep your system of record exactly as it is."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can Claude for Legal connect to Filevine and Westlaw?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Filevine and Westlaw are the most common stack we configure for litigation firms. We wire Claude's MCP connectors so it can pull matter data from Filevine and run research and citation checks against Westlaw, then route the output back into your drafting workflow. iManage, DocuSign, MyCase, Clio, and Microsoft 365 connect the same way during the configuration sprint."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does a Claude for Legal implementation take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Three to five days of focused configuration work per firm, not a six-month IT project. It starts with a free 30-minute audit, followed by a fixed-scope sprint where we wire the connectors, build your playbooks, and train your paralegals. Most firms have their first configured workflows — usually demand letters or deposition summaries — running in production by the end of the first week."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What does Claude for Legal configuration cost?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The configuration sprint is a fixed fee from $950, scaling to $7,500 for larger scopes, and the exact number is set during the free audit before you commit. An optional ongoing retainer runs $150 to $1,500 per month depending on firm size and how many workflows you run. There is a 30-day cancellation and no lock-in. You see the full price before any work begins."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is our data safe with Claude for Legal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Claude for Legal is Anthropic's product, built for the confidentiality demands of legal work, and your matter data stays governed by Anthropic's enterprise terms. During configuration we set the connectors so Claude reaches only the systems and matters you authorize, scoped to your firm's access rules. We document exactly what is connected and what is not, so your managing partner can see the data boundaries in writing."
-            }
-          }
-        ]
-      }
-    </script>
-  </head>
+<!-- ============ Schema: FAQPage ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What does Claude for Legal configuration actually do?", "acceptedAnswer": { "@type": "Answer", "text": "We turn Anthropic's $20-per-seat Claude for Legal into a tool your paralegal can run without training: MCP connectors wired into Filevine, Westlaw, iManage, DocuSign, and Microsoft 365; written playbooks for the workflows your firm runs by hand; and a one-page SOP per playbook." } },
+    { "@type": "Question", "name": "Who configures Claude for Legal for small litigation firms?", "acceptedAnswer": { "@type": "Answer", "text": "We do. We are a configuration shop, not a software reseller. Engagements are scoped, paid by the firm, and run by people who have wired MCP connectors into Filevine and Westlaw before. No procurement cycle, no six-figure statement of work." } },
+    { "@type": "Question", "name": "How does Claude for Legal compare to Harvey AI?", "acceptedAnswer": { "@type": "Answer", "text": "Harvey is roughly $1,200 per seat per month and sells into AmLaw 200 firms. Claude for Legal is roughly $20 per seat per month — a 98 percent price collapse — and ships with native MCP connectors small firms can configure. Comparable reasoning. Different economics." } },
+    { "@type": "Question", "name": "Do we need to switch case management platforms?", "acceptedAnswer": { "@type": "Answer", "text": "No. Claude reads from your existing Filevine, Clio, MyCase, or Litify through MCP connectors and writes back to the same matter. Nothing migrates. Your matter structure, billing codes, and retention policy stay where they are." } },
+    { "@type": "Question", "name": "Can Claude for Legal connect to Filevine and Westlaw?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both ship as native MCP connectors. Filevine surfaces matters, contacts, and custom field data; Westlaw surfaces citations, KeyCite results, and case content. We configure both during the sprint and combine them into playbooks — a Filevine-sourced demand letter, cite-checked against Westlaw, formatted to your template." } },
+    { "@type": "Question", "name": "How long does a Claude for Legal implementation take?", "acceptedAnswer": { "@type": "Answer", "text": "Three to five focused days, spread across one to three weeks. Day one: audit and connectors. Days two and three: playbooks. Day four: paralegal training against the SOPs. Day five: buffer for the issues that surface during the first paid matter." } },
+    { "@type": "Question", "name": "What does Claude for Legal configuration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Configuration sprint: a fixed fee between $950 and $7,500, scoped during the free audit. The Anthropic license is separate (~$20 per attorney per month, billed by Anthropic). Ongoing retainer: $150 to $1,500 per month. 30-day cancellation. No lock-in." } },
+    { "@type": "Question", "name": "Is our data safe with Claude for Legal?", "acceptedAnswer": { "@type": "Answer", "text": "Anthropic's enterprise terms exclude your prompts and documents from model training, encrypt data in transit and at rest, and support zero-retention mode. MCP connectors respect folder-level permissions, including ethical walls. We document the access boundaries in the SOP we hand off." } }
+  ]
+}
+</script>
 
-  <body class="font-sans text-ink bg-white antialiased">
-    <!-- ============================ HEADER ============================ -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
-      <div class="mx-auto max-w-6xl px-5 h-16 flex items-center justify-between">
-        <a href="#top" class="flex items-center gap-2" aria-label="LayerTWO home">
-          <img src="assets/TransparentLogo.png" alt="LayerTWO logo" class="h-7 w-auto" />
-          <span class="font-bold tracking-tight">LayerTWO</span>
-        </a>
-        <nav class="flex items-center gap-6 text-sm">
-          <a href="#how-it-works" class="hidden sm:inline text-gray-600 hover:text-ink">How it works</a>
-          <a href="#pricing" class="hidden sm:inline text-gray-600 hover:text-ink">Pricing</a>
-          <a
-            href="https://calendar.app.google/dvEqY95HV8xJ2fUA7"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center rounded-md bg-accent px-4 py-2 font-semibold text-white hover:bg-accent-hover"
-            >Book a free audit</a
-          >
-        </nav>
+<!-- Fonts + design system -->
+<link rel="stylesheet" href="colors_and_type.css">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+
+  a { color: var(--fg-1); text-decoration: none; }
+  a.inline-link { text-decoration: underline; text-decoration-color: oklch(0.25 0.04 250 / 0.3); text-underline-offset: 3px; }
+  a.inline-link:hover { text-decoration-color: var(--fg-1); }
+
+  .container { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  .container-narrow { width: 100%; max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+  /* ---------- Top nav ---------- */
+  .site-nav {
+    position: sticky; top: 0; z-index: 50;
+    background: oklch(0.985 0.005 85 / 0.85);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .site-nav .inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 32px; max-width: 1080px; margin: 0 auto;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 10px; }
+  .brand-logo { width: 30px; height: 30px; border-radius: 6px; display: block; }
+  .brand-name {
+    font-family: var(--font-serif); font-weight: 300; font-size: 22px;
+    letter-spacing: -0.02em; color: var(--fg-1);
+  }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 14px; color: var(--fg-2); }
+  .nav-links a:hover { color: var(--fg-1); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+    padding: 12px 22px; border-radius: 6px; cursor: pointer;
+    border: 1px solid transparent; transition: all 180ms var(--ease-standard);
+    line-height: 1;
+  }
+  .btn-primary {
+    background: var(--brass-500); color: var(--ivory-50);
+    border-color: var(--brass-600);
+    box-shadow: 0 1px 2px rgba(0,0,0,.08), inset 0 1px 0 oklch(0.85 0.06 70 / .4);
+  }
+  .btn-primary:hover { background: var(--brass-600); border-color: var(--brass-700); }
+  .btn-primary:focus-visible { outline: none; box-shadow: var(--shadow-focus), 0 1px 2px rgba(0,0,0,.08); }
+  .btn-ghost { background: transparent; color: var(--fg-1); border-color: var(--border-strong); }
+  .btn-ghost:hover { background: var(--muted); }
+  .btn-sm { font-size: 13px; padding: 8px 14px; }
+  .btn .arrow { font-family: var(--font-sans); font-weight: 400; }
+
+  /* ---------- Hero — single column, typographic ---------- */
+  .hero {
+    padding: 120px 0 88px;
+    position: relative;
+    text-align: left;
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 50% at 50% 0%, oklch(0.92 0.04 70 / 0.18), transparent 60%),
+      linear-gradient(180deg, var(--paper) 0%, var(--background) 100%);
+    z-index: -1;
+  }
+  h1.hero-h1 {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: clamp(48px, 6.6vw, 88px);
+    line-height: 1.02; letter-spacing: -0.03em;
+    color: var(--fg-1); margin: 0 0 28px;
+    max-width: 17ch; text-wrap: balance;
+  }
+  h1.hero-h1 em {
+    font-style: italic; color: var(--brass-600); font-weight: 300;
+  }
+  .hero-sub {
+    font-size: 21px; line-height: 1.55; color: var(--fg-2);
+    max-width: 56ch; margin: 0 0 40px;
+  }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .hero-trust {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-soft);
+    font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-3); letter-spacing: 0.04em;
+    display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+  }
+  .hero-trust .pip { width: 6px; height: 6px; background: var(--emerald-500); border-radius: 50%; }
+
+  /* ---------- Quiet stat strip ---------- */
+  .stats {
+    padding: 0 0 88px;
+  }
+  .stats .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .stat {
+    padding: 36px 32px;
+    border-right: 1px solid var(--border-soft);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .stat:last-child { border-right: 0; }
+  .stat-num {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 56px; line-height: 1; letter-spacing: -0.03em;
+    color: var(--fg-1);
+  }
+  .stat-num .unit { font-size: 22px; color: var(--brass-600); margin-left: 4px; }
+  .stat-label { font-size: 14px; line-height: 1.5; color: var(--fg-2); max-width: 26ch; }
+
+  /* ---------- Section header ---------- */
+  section { padding: 112px 0; }
+  .section-mark {
+    width: 36px; height: 1.5px;
+    background: var(--brass-500);
+    margin-bottom: 28px;
+  }
+  h2.section-h {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: clamp(34px, 4.2vw, 52px); line-height: 1.08;
+    letter-spacing: -0.025em; color: var(--fg-1);
+    margin: 0 0 24px; max-width: 22ch;
+    text-wrap: balance;
+  }
+  .section-sub {
+    font-size: 19px; line-height: 1.6; color: var(--fg-2);
+    max-width: 60ch; margin: 0 0 56px;
+  }
+
+  /* ---------- Pain ---------- */
+  #problem .pain-text p {
+    font-size: 19px; line-height: 1.6; color: var(--fg-2);
+    margin: 0 0 56px; max-width: 64ch;
+  }
+  .pain-list {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-top: 1px solid var(--border-soft);
+    list-style: none; margin: 0; padding: 0;
+  }
+  .pain-item {
+    padding: 32px 28px 32px 0;
+    border-right: 1px solid var(--border-soft);
+  }
+  .pain-item:last-child { border-right: 0; padding-right: 0; }
+  .pain-item .num {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--brass-700); letter-spacing: 0.14em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .pain-item h4 {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 22px; line-height: 1.25; letter-spacing: -0.01em;
+    color: var(--fg-1); margin: 0 0 10px;
+  }
+  .pain-item p {
+    font-size: 14.5px; line-height: 1.55; color: var(--fg-2); margin: 0;
+  }
+
+  /* ---------- What we configure ---------- */
+  #what { background: var(--paper); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .config-list {
+    display: flex; flex-direction: column;
+    border-top: 1px solid var(--border-soft);
+  }
+  .config-row {
+    display: grid; grid-template-columns: 80px 1fr 1.4fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--border-soft);
+    align-items: baseline;
+  }
+  .config-row .num {
+    font-family: var(--font-mono); font-size: 12px;
+    color: var(--brass-700); letter-spacing: 0.14em;
+    text-transform: uppercase; padding-top: 6px;
+  }
+  .config-row h3 {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 26px; line-height: 1.2; letter-spacing: -0.01em;
+    color: var(--fg-1); margin: 0;
+    text-wrap: balance;
+  }
+  .config-row p {
+    font-size: 16px; line-height: 1.6; color: var(--fg-2); margin: 0;
+  }
+
+  /* ---------- How it works ---------- */
+  .steps {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  }
+  .step { padding: 0; }
+  .step-num {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 72px; line-height: 1; color: var(--brass-500);
+    letter-spacing: -0.03em; opacity: 0.65;
+    margin-bottom: 18px;
+  }
+  .step h3 {
+    font-family: var(--font-serif); font-weight: 300; font-size: 22px;
+    line-height: 1.25; letter-spacing: -0.01em;
+    margin: 0 0 12px; color: var(--fg-1);
+  }
+  .step p {
+    font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0 0 18px;
+  }
+  .step .meta {
+    font-family: var(--font-mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--brass-700);
+    padding-top: 16px; border-top: 1px solid var(--border-soft);
+  }
+
+  /* ---------- Stacks (quiet inline row) ---------- */
+  #stacks { padding: 88px 0; background: var(--paper); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .stacks-row {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+    margin: 24px 0 20px;
+  }
+  .stack-tile {
+    padding: 28px 12px;
+    border-right: 1px solid var(--border-soft);
+    text-align: center;
+    font-family: var(--font-serif); font-weight: 300; font-size: 17px;
+    color: var(--fg-1); letter-spacing: -0.01em;
+  }
+  .stack-tile:last-child { border-right: 0; }
+  .stack-note {
+    font-family: var(--font-mono); font-size: 12px; color: var(--fg-3);
+    text-align: center; letter-spacing: 0.02em;
+  }
+  .stack-note a { color: var(--fg-1); text-decoration: underline; text-decoration-color: oklch(0.25 0.04 250 / 0.3); text-underline-offset: 3px; }
+
+  /* ---------- Before / after ---------- */
+  .ba-table {
+    width: 100%; border-collapse: collapse;
+    background: transparent; border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .ba-table th, .ba-table td {
+    text-align: left; padding: 18px 0; vertical-align: top;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .ba-table th:not(:first-child), .ba-table td:not(:first-child) { padding-left: 24px; }
+  .ba-table thead th {
+    font-family: var(--font-mono); font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--fg-3); font-weight: 600; border-bottom: 1px solid var(--border);
+  }
+  .ba-table tbody tr:last-child td { border-bottom: 0; }
+  .ba-workflow { font-weight: 500; color: var(--fg-1); font-size: 15px; }
+  .ba-before { color: var(--fg-3); font-family: var(--font-mono); font-size: 13px; }
+  .ba-after  { color: var(--brass-700); font-family: var(--font-mono); font-size: 13px; font-weight: 600; }
+  .ba-note { font-family: var(--font-mono); font-size: 12px; color: var(--fg-muted); margin-top: 18px; letter-spacing: 0.02em; }
+
+  /* ---------- Pricing ---------- */
+  #pricing { background: var(--paper); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .price-list {
+    border-top: 1px solid var(--border-soft);
+  }
+  .price-row {
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border-soft);
+    align-items: baseline; gap: 24px;
+  }
+  .price-row:last-child { border-bottom: 0; }
+  .price-name {
+    font-family: var(--font-serif); font-weight: 300; font-size: 24px;
+    line-height: 1.2; letter-spacing: -0.01em;
+    color: var(--fg-1); margin: 0 0 6px;
+  }
+  .price-desc { font-size: 14px; color: var(--fg-3); }
+  .price-num {
+    font-family: var(--font-serif); font-weight: 300; font-size: 32px;
+    color: var(--fg-1); letter-spacing: -0.02em; white-space: nowrap;
+    text-align: right;
+  }
+  .price-unit { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.1em; text-align: right; margin-top: 4px; }
+  .pricing-fine {
+    margin-top: 32px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--fg-3); letter-spacing: 0.02em;
+    display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  .pricing-fine span { display: inline-flex; align-items: center; gap: 8px; }
+  .pricing-fine .pip { width: 5px; height: 5px; border-radius: 50%; background: var(--emerald-500); }
+
+  /* ---------- FAQ ---------- */
+  .faq details {
+    border-top: 1px solid var(--border-soft);
+    padding: 26px 4px;
+  }
+  .faq details:last-of-type { border-bottom: 1px solid var(--border-soft); }
+  .faq summary {
+    list-style: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    font-family: var(--font-serif); font-weight: 300; font-size: 22px;
+    letter-spacing: -0.01em; color: var(--fg-1);
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; font-family: var(--font-serif); font-weight: 300;
+    font-size: 30px; line-height: 1; color: var(--brass-600);
+    transition: transform 180ms var(--ease-standard);
+  }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p {
+    font-size: 16px; line-height: 1.65; color: var(--fg-2);
+    margin: 14px 0 0; max-width: 70ch;
+  }
+
+  /* ---------- CTA / Book ---------- */
+  #book { background: var(--navy-500); color: var(--ivory-100); padding: 120px 0; }
+  #book h2 { color: var(--ivory-100); }
+  #book .section-sub { color: oklch(0.78 0.02 85); }
+  #book .section-mark { background: var(--brass-300); }
+  .book-foot {
+    display: flex; align-items: center; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+  }
+  .book-foot .small {
+    font-family: var(--font-mono); font-size: 11px;
+    color: oklch(0.62 0.01 85); letter-spacing: 0.04em;
+    max-width: 36ch; line-height: 1.55;
+  }
+
+  /* ---------- Footer ---------- */
+  footer.site-foot {
+    background: var(--paper); border-top: 1px solid var(--border-soft);
+    padding: 36px 0;
+  }
+  footer.site-foot .inner {
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+    flex-wrap: wrap;
+  }
+  .foot-tag {
+    font-family: var(--font-mono); font-size: 12px; color: var(--fg-3);
+    letter-spacing: 0.04em;
+  }
+  .foot-links { display: flex; gap: 22px; }
+  .foot-links a { font-size: 13px; color: var(--fg-2); }
+  .foot-disclaimer {
+    border-top: 1px solid var(--border-soft); margin-top: 28px; padding-top: 20px;
+    font-size: 12px; line-height: 1.55; color: var(--fg-muted);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    section { padding: 80px 0; }
+    .hero { padding: 72px 0 56px; }
+    h1.hero-h1 { max-width: 100%; }
+    .stats .grid { grid-template-columns: 1fr; }
+    .stat { border-right: 0; border-bottom: 1px solid var(--border-soft); }
+    .stat:last-child { border-bottom: 0; }
+    .pain-list { grid-template-columns: 1fr; border-top: 0; }
+    .pain-item { border-right: 0; border-bottom: 1px solid var(--border-soft); padding: 24px 0; }
+    .pain-item:last-child { border-bottom: 0; }
+    .config-row { grid-template-columns: 60px 1fr; gap: 16px; }
+    .config-row p { grid-column: span 2; }
+    .steps { grid-template-columns: 1fr; gap: 48px; }
+    .stacks-row { grid-template-columns: repeat(3, 1fr); }
+    .stack-tile:nth-child(3n) { border-right: 0; }
+    .stack-tile { border-bottom: 1px solid var(--border-soft); }
+    .stack-tile:nth-last-child(-n+1) { border-bottom: 0; }
+    .price-row { grid-template-columns: 1fr; gap: 6px; }
+    .price-num, .price-unit { text-align: left; }
+    .ba-table th:nth-child(2), .ba-table td:nth-child(2) { display: none; }
+    .nav-links a:not(.btn) { display: none; }
+    .container, .container-narrow { padding: 0 20px; }
+    .site-nav .inner { padding: 12px 20px; }
+    #book { padding: 80px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================== NAV ================== -->
+<header class="site-nav">
+  <div class="inner">
+    <a class="brand" href="#">
+      <img class="brand-logo" src="assets/TransparentLogo.png" alt="LayerTWO logo">
+      <span class="brand-name">LayerTWO</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#what">What we configure</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Book the audit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ================== HERO ================== -->
+<section class="hero" aria-labelledby="hero-h1">
+  <div class="container">
+    <h1 class="hero-h1" id="hero-h1">
+      Claude for Legal, <em>configured</em> for your litigation stack.
+    </h1>
+    <p class="hero-sub">
+      Anthropic shipped Claude for Legal on May 13, 2026, at roughly two percent of Harvey's per-seat price. We wire it into Filevine, Westlaw, and DocuSign, build the playbooks, and train your paralegals. Three to five days. Fixed fee.
+    </p>
+
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Book your free 30-minute audit <span class="arrow">&rarr;</span></a>
+      <a class="btn btn-ghost" href="#how">See a typical engagement</a>
+    </div>
+
+    <div class="hero-trust">
+      <span class="pip" aria-hidden="true"></span>
+      <span>Configuring for 5&ndash;30 attorney litigation firms across the U.S.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================== STAT STRIP ================== -->
+<section class="stats" aria-label="At a glance">
+  <div class="container">
+    <div class="grid">
+      <div class="stat">
+        <div class="stat-num">1,300<span class="unit">+</span></div>
+        <div class="stat-label">AI-related sanctions in U.S. filings, April 2026, up from 87 a year earlier.</div>
       </div>
-    </header>
-
-    <main id="top">
-      <!-- ============================ HERO ============================ -->
-      <section class="border-b border-gray-200 bg-gray-50">
-        <div class="mx-auto max-w-6xl px-5 py-16 sm:py-24">
-          <p class="text-sm font-semibold uppercase tracking-wide text-accent">
-            Claude for Legal configuration
-          </p>
-          <h1 class="mt-3 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-            Claude for Legal, configured for your litigation stack.
-          </h1>
-          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700">
-            Anthropic shipped Claude for Legal on May 13, 2026. We wire it into the tools your firm
-            already runs — Filevine, Westlaw, DocuSign — and build the demand-letter,
-            deposition-summary, and discovery-review playbooks your paralegals use the next morning.
-            Fixed-fee configuration from $950. Three to five days of focused work, not a six-month IT
-            project.
-          </p>
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href="https://calendar.app.google/dvEqY95HV8xJ2fUA7"
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover"
-              >Book your free 30-minute configuration audit</a
-            >
-            <a
-              href="#how-it-works"
-              class="inline-flex items-center justify-center rounded-md border border-gray-300 px-6 py-3 text-base font-semibold text-ink hover:border-gray-400"
-              >See a typical engagement</a
-            >
-          </div>
-          <p class="mt-6 text-sm text-gray-500">
-            Building for litigation boutiques across the U.S. ·
-            <span class="font-medium text-gray-700">1,300+ AI sanctions in legal filings as of April 2026</span>
-          </p>
-        </div>
-      </section>
-
-      <!-- ===================== STAT-CARD SCAFFOLDING ===================== -->
-      <section aria-label="Key figures" class="border-b border-gray-200">
-        <div class="mx-auto grid max-w-6xl grid-cols-1 gap-px bg-gray-200 sm:grid-cols-3">
-          <!-- REAL: ~1,300+ AI-related sanctions / problem filings tracked as of April 2026, up from 87 in May 2025 (per strategy memo). -->
-          <div class="bg-white p-6">
-            <div class="text-3xl font-extrabold">1,300+</div>
-            <p class="mt-2 text-sm text-gray-600">
-              AI-related sanctions in legal filings as of April 2026 — up from 87 a year earlier.
-            </p>
-          </div>
-          <!-- REAL: ~98% price collapse vs Harvey ($1,200/seat/mo → ~$20/seat/mo) at Claude for Legal launch. -->
-          <div class="bg-white p-6">
-            <div class="text-3xl font-extrabold">~98%</div>
-            <p class="mt-2 text-sm text-gray-600">
-              Price drop vs Harvey at launch — roughly $1,200 to $20 per seat per month.
-            </p>
-          </div>
-          <!-- REAL: 3–5 days of focused configuration work per firm. -->
-          <div class="bg-white p-6">
-            <div class="text-3xl font-extrabold">3–5 days</div>
-            <p class="mt-2 text-sm text-gray-600">
-              Of focused configuration work per firm — connectors, playbooks, and paralegal training.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================ PAIN ============================ -->
-      <section class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
-        <h2 class="text-3xl font-extrabold tracking-tight">The problem isn't the model. It's the configuration.</h2>
-        <p class="mt-6 text-lg leading-relaxed text-gray-700">
-          Claude for Legal is here, and at roughly $20 per seat per month it is finally priced for a
-          5-to-30-attorney boutique. But a license is not a workflow. Out of the box, Claude is a
-          blank chat box — it does not know your Filevine matter structure, your Westlaw research
-          habits, or how your paralegals draft a demand letter. The capability arrived; the
-          configuration that turns it into billable-hour leverage did not.
-        </p>
-        <p class="mt-4 text-lg leading-relaxed text-gray-700">
-          For a firm with no internal IT, that gap is the whole problem. The work of wiring
-          connectors and building playbooks lands on a managing partner who bills $400 an hour and
-          has no time to learn an MCP connector — so the license sits unused, or worse, an associate
-          pastes a hallucinated citation into a filing and the firm joins the sanctions count.
-        </p>
-        <ul class="mt-8 space-y-4">
-          <li class="flex gap-3">
-            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"></span>
-            <span class="text-gray-700"
-              ><span class="font-semibold text-ink">The 90-minute setup interview.</span> Configuring
-              Claude well means a structured interview about every workflow and tool — time a
-              partner rarely has and a paralegal isn't positioned to lead.</span
-            >
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"></span>
-            <span class="text-gray-700"
-              ><span class="font-semibold text-ink">Billable-hour culture blocks self-serve.</span> Every
-              hour spent fumbling with connector settings is an hour not billed. Self-configuration
-              is technically possible and practically dead on arrival.</span
-            >
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"></span>
-            <span class="text-gray-700"
-              ><span class="font-semibold text-ink">Hostile tool UIs.</span> Wiring Claude into
-              Filevine, Westlaw, iManage, and DocuSign means navigating admin panels and connector
-              permissions that were never designed for a litigation paralegal.</span
-            >
-          </li>
-          <li class="flex gap-3">
-            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-accent"></span>
-            <span class="text-gray-700"
-              ><span class="font-semibold text-ink">Escalating sanction risk.</span> Unconfigured,
-              ungoverned AI use is exactly what produced 1,300+ sanctioned filings by April 2026. A
-              configured system with cited sources is the difference.</span
-            >
-          </li>
-        </ul>
-      </section>
-
-      <!-- ====================== WHAT WE CONFIGURE ====================== -->
-      <section class="border-y border-gray-200 bg-gray-50">
-        <div class="mx-auto max-w-5xl px-5 py-16 sm:py-20">
-          <h2 class="text-3xl font-extrabold tracking-tight">What we configure</h2>
-          <p class="mt-4 max-w-2xl text-gray-700">
-            Five workstreams, scoped to your stack during the audit. Every one is named work with a
-            named output — not a generic enablement deck.
-          </p>
-
-          <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <article>
-              <h3 class="text-xl font-bold">Filevine workflow automation</h3>
-              <p class="mt-2 text-gray-700">
-                We wire Claude's MCP connector into Filevine so it reads matter data, document
-                folders, and case timelines directly. That turns intake-to-matter setup and status
-                updates into one-step playbooks instead of paralegal copy-paste across screens.
-              </p>
-            </article>
-            <article>
-              <h3 class="text-xl font-bold">Westlaw research + drafting integration</h3>
-              <p class="mt-2 text-gray-700">
-                We connect Claude to Westlaw so research and citation checks run against real
-                authority, not the model's memory. Your associates draft memos with sources that
-                exist — the single most direct defense against the citation errors driving AI
-                sanctions.
-              </p>
-            </article>
-            <article>
-              <h3 class="text-xl font-bold">iManage, DocuSign + Microsoft 365 connectivity</h3>
-              <p class="mt-2 text-gray-700">
-                We wire the document and signature side of your stack: iManage for document
-                management, DocuSign for execution, and Microsoft 365 for the Word and Outlook
-                surfaces your attorneys actually work in. Claude reaches only the matters you
-                authorize.
-              </p>
-            </article>
-            <article>
-              <h3 class="text-xl font-bold">Practice-specific playbooks</h3>
-              <p class="mt-2 text-gray-700">
-                We build the repeatable workflows your firm runs daily — demand letters, deposition
-                summaries, discovery review, and intake. Each playbook is configured to your
-                templates and voice, so the first draft lands close to your final, not a generic
-                starting point.
-              </p>
-            </article>
-            <article class="md:col-span-2">
-              <h3 class="text-xl font-bold">Paralegal training + documented SOPs</h3>
-              <p class="mt-2 max-w-3xl text-gray-700">
-                We train the paralegals who will run these workflows every day and leave behind
-                written SOPs for each one. When a new hire starts or a workflow changes, your firm
-                has documentation it owns — not tribal knowledge that walks out the door.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======================= HOW IT WORKS ========================= -->
-      <section id="how-it-works" class="mx-auto max-w-5xl px-5 py-16 sm:py-20">
-        <h2 class="text-3xl font-extrabold tracking-tight">How an engagement works</h2>
-        <p class="mt-4 max-w-2xl text-gray-700">
-          Three steps that answer your three questions up front: what's in scope, what it costs, and
-          whether you're locked in.
-        </p>
-
-        <ol class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <li>
-            <div class="text-sm font-bold uppercase tracking-wide text-accent">Step 1</div>
-            <h3 class="mt-2 text-xl font-bold">Free 30-minute audit</h3>
-            <p class="mt-2 text-gray-700">
-              We walk your stack — Filevine, Westlaw, DocuSign, whatever you run — and your highest-
-              volume workflows. You leave the call with a fixed scope and a fixed price, before you
-              spend a dollar. If configuration won't pay for itself at your firm, we'll tell you on
-              the call.
-            </p>
-          </li>
-          <li>
-            <div class="text-sm font-bold uppercase tracking-wide text-accent">Step 2</div>
-            <h3 class="mt-2 text-xl font-bold">Fixed-scope configuration sprint</h3>
-            <p class="mt-2 text-gray-700">
-              Over three to five days we wire the connectors, build your practice playbooks, and
-              train your paralegals against documented SOPs. The fee is fixed from the audit, so
-              there is no meter running and no surprise invoice. Your first workflows go live in
-              production by the end of the sprint.
-            </p>
-          </li>
-          <li>
-            <div class="text-sm font-bold uppercase tracking-wide text-accent">Step 3</div>
-            <h3 class="mt-2 text-xl font-bold">Ongoing maintenance retainer</h3>
-            <p class="mt-2 text-gray-700">
-              Optional. As Claude for Legal ships updates and your matters evolve, we keep the
-              connectors current and add playbooks as new practice needs surface. The retainer runs
-              month to month with a 30-day cancellation. No lock-in — you keep everything we
-              configured if you leave.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- ===================== STACKS WE CONFIGURE ===================== -->
-      <section class="border-y border-gray-200 bg-gray-50">
-        <div class="mx-auto max-w-5xl px-5 py-16">
-          <h2 class="text-3xl font-extrabold tracking-tight">Stacks we configure</h2>
-          <div class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-gray-200 bg-gray-200 sm:grid-cols-3 lg:grid-cols-7">
-            <!-- TODO: swap each placeholder div for a real logo (img, loading="lazy") -->
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">Filevine</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">Westlaw</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">iManage</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">DocuSign</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">MyCase</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">Clio</div>
-            <div class="flex items-center justify-center bg-white px-4 py-6 text-sm font-semibold text-gray-700">Microsoft 365</div>
-          </div>
-          <p class="mt-4 text-sm text-gray-600">
-            Using something else?
-            <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener" class="font-semibold underline decoration-gray-300 underline-offset-2 hover:decoration-ink">Mention it during your audit.</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- ===================== BEFORE / AFTER TABLE ===================== -->
-      <section class="mx-auto max-w-5xl px-5 py-16 sm:py-20">
-        <h2 class="text-3xl font-extrabold tracking-tight">Where the billable hours go back</h2>
-        <p class="mt-4 max-w-2xl text-gray-700">
-          The same paralegal, the same matter — before and after the workflow is configured.
-        </p>
-        <!-- REVIEW: numbers illustrative until first 3 engagements complete. -->
-        <div class="mt-8 overflow-x-auto">
-          <table class="w-full border-collapse text-left text-sm">
-            <thead>
-              <tr class="border-b-2 border-ink">
-                <th scope="col" class="py-3 pr-4 font-bold">Workflow</th>
-                <th scope="col" class="py-3 pr-4 font-bold">Before</th>
-                <th scope="col" class="py-3 font-bold text-accent">After (configured)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200">
-              <tr>
-                <td class="py-3 pr-4 font-medium">Demand letter drafting</td>
-                <td class="py-3 pr-4 text-gray-600">3–4 hours</td>
-                <td class="py-3 font-semibold">25 minutes to review-ready</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium">Deposition summary</td>
-                <td class="py-3 pr-4 text-gray-600">4–6 hours per transcript</td>
-                <td class="py-3 font-semibold">20 minutes per transcript</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium">Discovery document review</td>
-                <td class="py-3 pr-4 text-gray-600">Days per production</td>
-                <td class="py-3 font-semibold">Hours, with cited flags</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium">Intake-to-matter setup</td>
-                <td class="py-3 pr-4 text-gray-600">45–60 minutes</td>
-                <td class="py-3 font-semibold">Under 10 minutes</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium">Research-to-memo</td>
-                <td class="py-3 pr-4 text-gray-600">3–5 hours</td>
-                <td class="py-3 font-semibold">45 minutes, Westlaw-cited</td>
-              </tr>
-              <tr>
-                <td class="py-3 pr-4 font-medium">Client status updates</td>
-                <td class="py-3 pr-4 text-gray-600">20–30 minutes each</td>
-                <td class="py-3 font-semibold">Under 5 minutes each</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="mt-4 text-xs text-gray-400">
-          Figures illustrative until our first engagements are measured. We report real numbers as
-          they land.
-        </p>
-      </section>
-
-      <!-- ============================ PRICING ============================ -->
-      <section id="pricing" class="border-y border-gray-200 bg-ink text-white">
-        <div class="mx-auto max-w-5xl px-5 py-16 sm:py-20">
-          <h2 class="text-3xl font-extrabold tracking-tight">Pricing, in the open</h2>
-          <p class="mt-4 max-w-2xl text-gray-300">
-            One model. No tiers, no per-seat games, no enterprise call-for-quote. You see the number
-            before any work starts.
-          </p>
-          <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div class="rounded-lg border border-white/15 bg-white/5 p-6">
-              <div class="text-sm font-semibold uppercase tracking-wide text-gray-400">Configuration sprint</div>
-              <div class="mt-2 text-3xl font-extrabold">$950 – $7,500</div>
-              <p class="mt-2 text-gray-300">
-                Fixed fee, scoped during the free audit. The low end fits a single-stack boutique;
-                the high end covers multi-tool firms with several practice playbooks.
-              </p>
-            </div>
-            <div class="rounded-lg border border-white/15 bg-white/5 p-6">
-              <div class="text-sm font-semibold uppercase tracking-wide text-gray-400">Ongoing retainer</div>
-              <div class="mt-2 text-3xl font-extrabold">$150 – $1,500<span class="text-lg font-bold">/mo</span></div>
-              <p class="mt-2 text-gray-300">
-                Optional. Depends on firm size and workflow count. Keeps connectors current and adds
-                playbooks as your practice grows.
-              </p>
-            </div>
-          </div>
-          <p class="mt-6 font-semibold">30-day cancellation. No lock-in. You keep everything we configured.</p>
-          <a
-            href="https://calendar.app.google/dvEqY95HV8xJ2fUA7"
-            target="_blank"
-            rel="noopener"
-            class="mt-8 inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover"
-            >Book your free 30-minute configuration audit</a
-          >
-        </div>
-      </section>
-
-      <!-- ============================ FAQ ============================ -->
-      <!-- Keep answers in sync with the FAQPage JSON-LD in <head>. -->
-      <section class="mx-auto max-w-3xl px-5 py-16 sm:py-20">
-        <h2 class="text-3xl font-extrabold tracking-tight">Questions partners ask</h2>
-        <div class="mt-8 divide-y divide-gray-200 border-y border-gray-200">
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              What does Claude for Legal configuration actually do?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              Configuration connects Claude for Legal to the tools your firm already runs and turns
-              its general capability into your firm's repeatable workflows. We wire the MCP
-              connectors into Filevine, Westlaw, and DocuSign, then build playbooks for the work you
-              do every day — demand letters, deposition summaries, discovery review, intake. You get
-              a configured system your paralegals use the next morning, not a blank chat box.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              Who configures Claude for Legal for small litigation firms?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              We do. LayerTWO configures Claude for Legal specifically for litigation boutiques of 5
-              to 30 attorneys that have no internal IT team. We handle the connector wiring, the
-              practice-specific playbooks, and the paralegal training, then leave you with documented
-              SOPs. You do not need a developer on staff, and you do not manage the setup yourself
-              during billable hours.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              How does Claude for Legal compare to Harvey AI?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              Claude for Legal launched May 13, 2026 at roughly $20 per seat per month, against
-              Harvey's reported $1,200 per seat per month — close to a 98% price collapse. For a
-              12-attorney boutique that difference is tens of thousands of dollars a year. The
-              capability is now within reach of firms that were priced out; configuration, not cost,
-              is the remaining barrier, and that is the part we handle.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              Do we need to switch case management platforms?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              No. We configure Claude for Legal around the stack you already run. If your firm is on
-              Filevine, Clio, MyCase, or Litify, we wire Claude into it rather than asking you to
-              migrate. Switching case management mid-stream is expensive and risky, and it is never a
-              precondition for working with us. You keep your system of record exactly as it is.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              Can Claude for Legal connect to Filevine and Westlaw?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              Yes. Filevine and Westlaw are the most common stack we configure for litigation firms.
-              We wire Claude's MCP connectors so it can pull matter data from Filevine and run
-              research and citation checks against Westlaw, then route the output back into your
-              drafting workflow. iManage, DocuSign, MyCase, Clio, and Microsoft 365 connect the same
-              way during the configuration sprint.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              How long does a Claude for Legal implementation take?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              Three to five days of focused configuration work per firm, not a six-month IT project.
-              It starts with a free 30-minute audit, followed by a fixed-scope sprint where we wire
-              the connectors, build your playbooks, and train your paralegals. Most firms have their
-              first configured workflows — usually demand letters or deposition summaries — running
-              in production by the end of the first week.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              What does Claude for Legal configuration cost?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              The configuration sprint is a fixed fee from $950, scaling to $7,500 for larger scopes,
-              and the exact number is set during the free audit before you commit. An optional
-              ongoing retainer runs $150 to $1,500 per month depending on firm size and how many
-              workflows you run. There is a 30-day cancellation and no lock-in. You see the full
-              price before any work begins.
-            </p>
-          </details>
-          <details class="group py-5">
-            <summary class="flex cursor-pointer items-center justify-between font-semibold">
-              Is our data safe with Claude for Legal?
-              <span class="ml-4 text-gray-400 group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-3 text-gray-700">
-              Claude for Legal is Anthropic's product, built for the confidentiality demands of legal
-              work, and your matter data stays governed by Anthropic's enterprise terms. During
-              configuration we set the connectors so Claude reaches only the systems and matters you
-              authorize, scoped to your firm's access rules. We document exactly what is connected
-              and what is not, so your managing partner can see the data boundaries in writing.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <!-- ====================== CTA ====================== -->
-      <section id="audit" class="border-y border-gray-200 bg-gray-50">
-        <div class="mx-auto max-w-2xl px-5 py-16 text-center sm:py-20">
-          <h2 class="text-3xl font-extrabold tracking-tight">Book your free 30-minute configuration audit</h2>
-          <p class="mt-4 text-gray-700">
-            Pick a time and tell us about your firm and your stack. We come to the call with a fixed
-            scope and a fixed price — and an honest read on whether configuration pays off for a firm
-            your size.
-          </p>
-          <a
-            href="https://calendar.app.google/dvEqY95HV8xJ2fUA7"
-            target="_blank"
-            rel="noopener"
-            class="mt-8 inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover"
-            >Book your free 30-minute configuration audit</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <!-- ============================ FOOTER ============================ -->
-    <footer class="bg-white">
-      <div class="mx-auto max-w-6xl px-5 py-10">
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div class="flex items-center gap-2">
-            <img src="assets/TransparentLogo.png" alt="LayerTWO logo" class="h-6 w-auto" loading="lazy" />
-            <span class="font-bold">LayerTWO</span>
-          </div>
-          <p class="text-sm text-gray-500">Claude for Legal, configured for your litigation stack.</p>
-          <a
-            href="https://calendar.app.google/dvEqY95HV8xJ2fUA7"
-            target="_blank"
-            rel="noopener"
-            class="text-sm font-semibold text-accent hover:text-accent-hover"
-            >Book a free audit</a
-          >
-        </div>
-        <p class="mt-6 text-xs text-gray-400">© 2026 LayerTWO. Claude and Claude for Legal are products of Anthropic. LayerTWO is an independent configuration partner and is not affiliated with Anthropic.</p>
+      <div class="stat">
+        <div class="stat-num">~98<span class="unit">%</span></div>
+        <div class="stat-label">Per-seat price collapse from Harvey to Claude for Legal.</div>
       </div>
-    </footer>
-  </body>
+      <div class="stat">
+        <div class="stat-num">3&ndash;5<span class="unit"> days</span></div>
+        <div class="stat-label">Focused configuration work per firm. No internal IT required.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== PAIN ================== -->
+<section id="problem" aria-labelledby="problem-h">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h" id="problem-h">The product is real. The configuration is the bottleneck.</h2>
+    <div class="pain-text">
+      <p>
+        Anthropic priced Claude for Legal for the entire market. Five-attorney boutiques can afford the license on day one. What they cannot afford is the configuration work &mdash; and that is the work nobody at the firm has a budget line for.
+      </p>
+    </div>
+    <ul class="pain-list">
+      <li class="pain-item">
+        <div class="num">01</div>
+        <h4>The 90-minute setup interview</h4>
+        <p>Onboarding asks for your matter taxonomy, billing codes, and folder permissions before Claude does useful work. No managing partner fills that form at 9pm.</p>
+      </li>
+      <li class="pain-item">
+        <div class="num">02</div>
+        <h4>MCP connectors are not partner-grade UI</h4>
+        <p>Filevine, Westlaw, and iManage each have a different auth flow and a different scopes screen. A wrong scope silently breaks a downstream playbook.</p>
+      </li>
+      <li class="pain-item">
+        <div class="num">03</div>
+        <h4>Escalating sanction risk</h4>
+        <p>1,300 AI-related sanctions in April 2026, up from 87 a year earlier. The exposure is showing up in published orders against named attorneys.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================== WHAT WE CONFIGURE ================== -->
+<section id="what">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h">What a sprint covers.</h2>
+    <p class="section-sub">
+      Three surfaces. One configured Claude. One written SOP per playbook.
+    </p>
+    <div class="config-list">
+      <div class="config-row">
+        <div class="num">01</div>
+        <h3>Connectors</h3>
+        <p>Filevine, Westlaw, iManage, DocuSign, MyCase, and Microsoft 365 wired against your tenant, with custom fields mapped, scopes verified, and write-backs respecting your billing codes.</p>
+      </div>
+      <div class="config-row">
+        <div class="num">02</div>
+        <h3>Playbooks</h3>
+        <p>Two or three workflows your firm runs by hand &mdash; demand letters, deposition summaries, discovery review, intake-to-matter &mdash; built against your templates and cite-checked against Westlaw.</p>
+      </div>
+      <div class="config-row">
+        <div class="num">03</div>
+        <h3>SOPs &amp; training</h3>
+        <p>One-page SOP per playbook plus a partner supervision SOP for sanction defense. Live training against a real matter from your firm. Versioned and yours to edit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== HOW IT WORKS ================== -->
+<section id="how">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h">Three phases. Fixed scope.</h2>
+    <p class="section-sub">
+      Audit, sprint, retainer. The structure answers the three questions every managing partner asks: scope, budget, lock-in.
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Free 30-minute audit</h3>
+        <p>Bring one workflow you currently run by hand. We walk it through Claude live and produce a written scope &mdash; surfaces, playbooks, days, fee &mdash; whether or not you move forward.</p>
+        <div class="meta">Outcome &middot; written scope</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Fixed-scope sprint</h3>
+        <p>Three to five days across one to three weeks. Connectors, then playbooks, then paralegal training against the SOPs. Buffer day for the issues that surface during your first paid matter.</p>
+        <div class="meta">Outcome &middot; first matter shipped</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Monthly retainer</h3>
+        <p>Connector maintenance, new workflows, paralegal refresh. Shared Slack for 30 days, then email with a four-hour business-day SLA. 30-day cancellation, no minimums.</p>
+        <div class="meta">Outcome &middot; predictable spend</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================== STACKS ================== -->
+<section id="stacks">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h" style="font-size: clamp(28px, 3.4vw, 40px); max-width: 36ch;">Wired into the case management, research, and signature tools you already use.</h2>
+    <div class="stacks-row">
+      <div class="stack-tile">Filevine</div>
+      <div class="stack-tile">Westlaw</div>
+      <div class="stack-tile">iManage</div>
+      <div class="stack-tile">DocuSign</div>
+      <div class="stack-tile">MyCase</div>
+      <div class="stack-tile">Clio</div>
+      <div class="stack-tile">Microsoft 365</div>
+    </div>
+    <p class="stack-note">Running Litify, NetDocuments, Smokeball, or PracticePanther? <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Mention it on your audit</a> &mdash; one custom connector is included in the standard sprint.</p>
+  </div>
+</section>
+
+<!-- ================== BEFORE / AFTER ================== -->
+<section id="compression">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h">The minutes Claude gives back.</h2>
+    <table class="ba-table" aria-label="Workflow compression: before and after Claude for Legal configuration">
+      <thead>
+        <tr>
+          <th scope="col">Workflow</th>
+          <th scope="col">Before</th>
+          <th scope="col">With configured Claude</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="ba-workflow">Demand letter (PI, mid-complexity)</td><td class="ba-before">~ 4 hr 30 min</td><td class="ba-after">22 min &middot; partner-reviewed</td></tr>
+        <tr><td class="ba-workflow">Deposition summary (3-hr transcript)</td><td class="ba-before">~ 3 hr 15 min</td><td class="ba-after">14 min &middot; witness-indexed</td></tr>
+        <tr><td class="ba-workflow">Discovery review (400 docs, first pass)</td><td class="ba-before">~ 9 hr</td><td class="ba-after">38 min &middot; privilege flagged</td></tr>
+        <tr><td class="ba-workflow">Intake-to-matter setup (Filevine)</td><td class="ba-before">~ 50 min</td><td class="ba-after">6 min &middot; phase-coded</td></tr>
+        <tr><td class="ba-workflow">Research-to-memo (jurisdiction-scoped)</td><td class="ba-before">~ 2 hr 40 min</td><td class="ba-after">18 min &middot; KeyCited</td></tr>
+        <tr><td class="ba-workflow">Client status updates (10 matters)</td><td class="ba-before">~ 1 hr 20 min</td><td class="ba-after">9 min &middot; matter-by-matter</td></tr>
+      </tbody>
+    </table>
+    <p class="ba-note">Illustrative benchmarks &middot; 12-attorney PI boutique, May 2026 &middot; calibrated against your matter during the audit.</p>
+  </div>
+</section>
+
+<!-- ================== PRICING ================== -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h">Pricing.</h2>
+    <p class="section-sub">
+      Anthropic's license is separate, billed by Anthropic directly. Our pricing covers the configuration work and the maintenance.
+    </p>
+    <div class="price-list">
+      <div class="price-row">
+        <div>
+          <div class="price-name">Configuration sprint</div>
+          <div class="price-desc">One-time fixed fee, scoped during the audit</div>
+        </div>
+        <div>
+          <div class="price-num">$950 &ndash; $7,500</div>
+          <div class="price-unit">fixed fee</div>
+        </div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">Ongoing retainer</div>
+          <div class="price-desc">Connector maintenance, new workflows, paralegal refresh</div>
+        </div>
+        <div>
+          <div class="price-num">$150 &ndash; $1,500</div>
+          <div class="price-unit">per month</div>
+        </div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price-name">Anthropic license</div>
+          <div class="price-desc">Billed by Anthropic directly, separate from our fees</div>
+        </div>
+        <div>
+          <div class="price-num">~$20</div>
+          <div class="price-unit">per attorney, monthly</div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-fine">
+      <span><span class="pip"></span>30-day cancellation</span>
+      <span><span class="pip"></span>No procurement cycle</span>
+      <span><span class="pip"></span>Pay by ACH or invoice</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================== FAQ ================== -->
+<section id="faq">
+  <div class="container-narrow">
+    <div class="section-mark"></div>
+    <h2 class="section-h">Answers, before the call.</h2>
+    <div class="faq">
+      <details>
+        <summary>What does Claude for Legal configuration actually do?</summary>
+        <p>We turn Anthropic's $20-per-seat Claude for Legal into a tool your paralegal can run without training: MCP connectors wired into Filevine, Westlaw, iManage, DocuSign, and Microsoft 365; written playbooks for the workflows your firm runs by hand; and a one-page SOP per playbook.</p>
+      </details>
+      <details>
+        <summary>Who configures Claude for Legal for small litigation firms?</summary>
+        <p>We do. We are a configuration shop, not a software reseller. Engagements are scoped, paid by the firm, and run by people who have wired MCP connectors into Filevine and Westlaw before. No procurement cycle, no six-figure statement of work.</p>
+      </details>
+      <details>
+        <summary>How does Claude for Legal compare to Harvey AI?</summary>
+        <p>Harvey is roughly $1,200 per seat per month and sells into AmLaw 200 firms. Claude for Legal is roughly $20 per seat per month &mdash; a 98 percent price collapse &mdash; and ships with native MCP connectors small firms can configure. Comparable reasoning. Different economics.</p>
+      </details>
+      <details>
+        <summary>Do we need to switch case management platforms?</summary>
+        <p>No. Claude reads from your existing Filevine, Clio, MyCase, or Litify through MCP connectors and writes back to the same matter. Nothing migrates. Your matter structure, billing codes, and retention policy stay where they are.</p>
+      </details>
+      <details>
+        <summary>Can Claude for Legal connect to Filevine and Westlaw?</summary>
+        <p>Yes. Both ship as native MCP connectors. Filevine surfaces matters, contacts, and custom field data; Westlaw surfaces citations, KeyCite results, and case content. We combine them into playbooks &mdash; a Filevine-sourced demand letter, cite-checked against Westlaw, formatted to your template.</p>
+      </details>
+      <details>
+        <summary>How long does a Claude for Legal implementation take?</summary>
+        <p>Three to five focused days, spread across one to three weeks. Day one: audit and connectors. Days two and three: playbooks. Day four: paralegal training against the SOPs. Day five: buffer for the issues that surface during the first paid matter.</p>
+      </details>
+      <details>
+        <summary>What does Claude for Legal configuration cost?</summary>
+        <p>Configuration sprint: a fixed fee between $950 and $7,500, scoped during the free audit. The Anthropic license is separate (~$20 per attorney per month, billed by Anthropic). Ongoing retainer: $150 to $1,500 per month. 30-day cancellation. No lock-in.</p>
+      </details>
+      <details>
+        <summary>Is our data safe with Claude for Legal?</summary>
+        <p>Anthropic's enterprise terms exclude your prompts and documents from model training, encrypt data in transit and at rest, and support zero-retention mode. MCP connectors respect folder-level permissions, including ethical walls. We document the access boundaries in the SOP we hand off.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================== CTA + BOOK ================== -->
+<section id="book">
+  <div class="container-narrow">
+    <div class="section-mark"></div>
+    <h2 class="section-h">Bring one workflow. Leave with a written scope.</h2>
+    <p class="section-sub">
+      Thirty minutes, on a video call. Pick a time that works &mdash; we reply within one business day.
+    </p>
+
+    <div class="book-foot">
+      <a class="btn btn-primary" href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Book the audit <span class="arrow">&rarr;</span></a>
+      <p class="small">No marketing list, no nurture sequence. The audit is free whether or not you move forward.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================== FOOTER ================== -->
+<footer class="site-foot">
+  <div class="container">
+    <div class="inner">
+      <a class="brand" href="#">
+        <img class="brand-logo" src="assets/TransparentLogo.png" alt="LayerTWO logo">
+        <span class="brand-name">LayerTWO</span>
+      </a>
+      <p class="foot-tag">Claude for Legal configuration for U.S. litigation firms.</p>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Book a free audit</a>
+      </nav>
+    </div>
+    <p class="foot-disclaimer">© 2026 LayerTWO. Claude and Claude for Legal are products of Anthropic. LayerTWO is an independent configuration partner and is not affiliated with Anthropic.</p>
+  </div>
+</footer>
+
+</body>
 </html>
