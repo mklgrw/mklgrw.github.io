@@ -304,22 +304,31 @@
     padding-top: 16px; border-top: 1px solid var(--border-soft);
   }
 
-  /* ---------- Stacks (quiet inline row) ---------- */
+  /* ---------- Stacks / connectors ---------- */
   #stacks { padding: 88px 0; background: var(--paper); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
-  .stacks-row {
-    display: grid; grid-template-columns: repeat(7, 1fr); gap: 0;
+  .connector-groups {
+    display: flex; flex-direction: column;
+    margin: 24px 0 28px;
+  }
+  .connector-group {
+    display: grid; grid-template-columns: 260px 1fr; gap: 32px;
+    padding: 28px 0;
     border-top: 1px solid var(--border-soft);
-    border-bottom: 1px solid var(--border-soft);
-    margin: 24px 0 20px;
+    align-items: start;
   }
-  .stack-tile {
-    padding: 28px 12px;
-    border-right: 1px solid var(--border-soft);
-    text-align: center;
-    font-family: var(--font-serif); font-weight: 300; font-size: 17px;
+  .connector-group:last-child { border-bottom: 1px solid var(--border-soft); }
+  .connector-cat {
+    font-family: var(--font-mono); font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--brass-700); line-height: 1.5; padding-top: 4px;
+  }
+  .connector-tiles { display: flex; flex-wrap: wrap; gap: 10px; }
+  .connector-tiles .pill {
+    font-family: var(--font-serif); font-weight: 300; font-size: 16px;
     color: var(--fg-1); letter-spacing: -0.01em;
+    padding: 10px 16px; border-radius: 6px;
+    border: 1px solid var(--border-soft); background: var(--background);
   }
-  .stack-tile:last-child { border-right: 0; }
   .stack-note {
     font-family: var(--font-mono); font-size: 12px; color: var(--fg-3);
     text-align: center; letter-spacing: 0.02em;
@@ -452,10 +461,7 @@
     .config-row { grid-template-columns: 60px 1fr; gap: 16px; }
     .config-row p { grid-column: span 2; }
     .steps { grid-template-columns: 1fr; gap: 48px; }
-    .stacks-row { grid-template-columns: repeat(3, 1fr); }
-    .stack-tile:nth-child(3n) { border-right: 0; }
-    .stack-tile { border-bottom: 1px solid var(--border-soft); }
-    .stack-tile:nth-last-child(-n+1) { border-bottom: 0; }
+    .connector-group { grid-template-columns: 1fr; gap: 14px; }
     .price-row { grid-template-columns: 1fr; gap: 6px; }
     .price-num, .price-unit { text-align: left; }
     .ba-table th:nth-child(2), .ba-table td:nth-child(2) { display: none; }
@@ -632,17 +638,57 @@
 <section id="stacks">
   <div class="container">
     <div class="section-mark"></div>
-    <h2 class="section-h" style="font-size: clamp(28px, 3.4vw, 40px); max-width: 36ch;">Wired into the case management, research, and signature tools you already use.</h2>
-    <div class="stacks-row">
-      <div class="stack-tile">Filevine</div>
-      <div class="stack-tile">Westlaw</div>
-      <div class="stack-tile">iManage</div>
-      <div class="stack-tile">DocuSign</div>
-      <div class="stack-tile">MyCase</div>
-      <div class="stack-tile">Clio</div>
-      <div class="stack-tile">Microsoft 365</div>
+    <h2 class="section-h" style="font-size: clamp(28px, 3.4vw, 40px); max-width: 36ch;">The 20 connectors Claude for Legal ships with.</h2>
+    <p class="section-sub">Native MCP connectors across the platforms litigation firms actually run. We wire the ones your firm uses against your tenant and combine them into playbooks.</p>
+    <div class="connector-groups">
+      <div class="connector-group">
+        <div class="connector-cat">Contract &amp; Document Management</div>
+        <div class="connector-tiles">
+          <span class="pill">iManage</span>
+          <span class="pill">NetDocuments</span>
+          <span class="pill">Ironclad</span>
+          <span class="pill">DocuSign</span>
+          <span class="pill">Definely</span>
+        </div>
+      </div>
+      <div class="connector-group">
+        <div class="connector-cat">Litigation &amp; eDiscovery</div>
+        <div class="connector-tiles">
+          <span class="pill">Relativity</span>
+          <span class="pill">Everlaw</span>
+          <span class="pill">Consilio</span>
+        </div>
+      </div>
+      <div class="connector-group">
+        <div class="connector-cat">Deal &amp; Transaction Platforms</div>
+        <div class="connector-tiles">
+          <span class="pill">Box</span>
+          <span class="pill">Datasite</span>
+        </div>
+      </div>
+      <div class="connector-group">
+        <div class="connector-cat">Legal Research &amp; Analytics</div>
+        <div class="connector-tiles">
+          <span class="pill">Thomson Reuters Westlaw / CoCounsel Legal</span>
+          <span class="pill">LexisNexis</span>
+          <span class="pill">Trellis</span>
+          <span class="pill">Solve Intelligence</span>
+          <span class="pill">Midpage</span>
+          <span class="pill">Descrybe</span>
+          <span class="pill">Legal Data Hunter</span>
+          <span class="pill">Lawve AI</span>
+        </div>
+      </div>
+      <div class="connector-group">
+        <div class="connector-cat">Public Service &amp; Access to Justice</div>
+        <div class="connector-tiles">
+          <span class="pill">CourtListener (Free Law Project)</span>
+          <span class="pill">Courtroom5</span>
+          <span class="pill">BoardWise</span>
+        </div>
+      </div>
     </div>
-    <p class="stack-note">Running Litify, NetDocuments, Smokeball, or PracticePanther? <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Mention it on your audit</a> &mdash; one custom connector is included in the standard sprint.</p>
+    <p class="stack-note">Running a platform that isn't on the list yet? <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Mention it on your audit</a> &mdash; one custom connector is included in the standard sprint.</p>
   </div>
 </section>
 
