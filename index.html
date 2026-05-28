@@ -165,6 +165,17 @@
   h1.hero-h1 em {
     font-style: italic; color: var(--brass-600); font-weight: 300;
   }
+  .hero-kicker {
+    font-family: var(--font-mono); font-size: 13px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--brass-700); margin: 0 0 22px;
+  }
+  .hero-kicker .rotator {
+    display: inline-block;
+    color: var(--fg-1); font-weight: 600;
+    transition: opacity 260ms var(--ease-standard);
+  }
+  .hero-kicker .rotator.is-fading { opacity: 0; }
   .hero-sub {
     font-size: 21px; line-height: 1.55; color: var(--fg-2);
     max-width: 56ch; margin: 0 0 40px;
@@ -535,11 +546,12 @@
 <!-- ================== HERO ================== -->
 <section class="hero" aria-labelledby="hero-h1">
   <div class="container">
+    <p class="hero-kicker">Works with <span class="rotator" id="tool-rotator">Filevine</span></p>
     <h1 class="hero-h1" id="hero-h1">
-      Filevine, Westlaw, and DocuSign &mdash; configured to run as <em>one workflow</em> for litigation firms.
+      Filevine, Westlaw, and DocuSign, configured to run as <em>one workflow</em> for litigation firms.
     </h1>
     <p class="hero-sub">
-      Your team pulls case notes from Filevine, runs research in Westlaw, drafts in Word, sends in DocuSign &mdash; every matter, every day. We wire those tools so the workflow runs in one place, configure the playbooks your firm uses daily, and train your paralegals. Three to five days. Fixed fee.
+      Your team pulls case notes from Filevine, runs research in Westlaw, drafts in Word, sends in DocuSign, every matter, every day. We wire those tools so the workflow runs in one place, configure the playbooks your firm uses daily, and train your paralegals. Three to five days. Fixed fee.
     </p>
 
     <div class="hero-ctas">
@@ -586,7 +598,7 @@
     <h2 class="section-h" id="problem-h">You bought the platform. You didn't get the workflow.</h2>
     <div class="pain-text">
       <p>
-        Filevine, Westlaw, iManage, DocuSign, Microsoft 365 &mdash; five tools, one workflow. Every matter, every day. The configuration that would make them work together is the job no one at the firm has a budget line for, and no partner has 90 quiet minutes to do.
+        Filevine, Westlaw, iManage, DocuSign, Microsoft 365, five tools, one workflow. Every matter, every day. The configuration that would make them work together is the job no one at the firm has a budget line for, and no partner has 90 quiet minutes to do.
       </p>
     </div>
     <ul class="pain-list">
@@ -598,7 +610,7 @@
       <li class="pain-item">
         <div class="num">02</div>
         <h4>Paralegal time on busywork.</h4>
-        <p>Hours every week your paralegals absorb on intake, document classification, and notice handling &mdash; work the firm can't bill for.</p>
+        <p>Hours every week your paralegals absorb on intake, document classification, and notice handling, work the firm can't bill for.</p>
       </li>
       <li class="pain-item">
         <div class="num">03</div>
@@ -626,7 +638,7 @@
       <div class="config-row">
         <div class="num">02</div>
         <h3>Your daily workflows, configured</h3>
-        <p>Two or three workflows your firm runs by hand &mdash; demand letters, deposition summaries, discovery review, intake-to-matter &mdash; built against your templates and cite-checked against Westlaw.</p>
+        <p>Two or three workflows your firm runs by hand, demand letters, deposition summaries, discovery review, intake-to-matter, built against your templates and cite-checked against Westlaw.</p>
       </div>
       <div class="config-row">
         <div class="num">03</div>
@@ -650,7 +662,7 @@
       <div class="step">
         <div class="step-num">01</div>
         <h3>Free 30-minute audit</h3>
-        <p>Bring one workflow you currently run by hand. We walk it through Claude live and produce a written scope &mdash; surfaces, playbooks, days, fee &mdash; whether or not you move forward.</p>
+        <p>Bring one workflow you currently run by hand. We walk it through Claude live and produce a written scope, surfaces, playbooks, days, fee, whether or not you move forward.</p>
         <div class="meta">Outcome &middot; written scope</div>
       </div>
       <div class="step">
@@ -717,8 +729,8 @@
     </div>
 
     <details class="more-connectors">
-      <summary>See all 20+ connectors &mdash; specialized &amp; emerging tools</summary>
-      <p class="more-intro">Beyond the core stack above, the platform supports specialized contract, eDiscovery, research, and access-to-justice tools. We wire any of these on request &mdash; just name yours during the audit.</p>
+      <summary>See all 20+ connectors, specialized &amp; emerging tools</summary>
+      <p class="more-intro">Beyond the core stack above, the platform supports specialized contract, eDiscovery, research, and access-to-justice tools. We wire any of these on request, just name yours during the audit.</p>
       <div class="connector-groups">
         <div class="connector-group">
           <div class="connector-cat">Contract &amp; document</div>
@@ -762,7 +774,7 @@
       </div>
     </details>
 
-    <p class="stack-note">Running a platform that isn't on the list yet? <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Mention it on your audit</a> &mdash; one custom connector is included in the standard sprint.</p>
+    <p class="stack-note">Running a platform that isn't on the list yet? <a href="https://calendar.app.google/dvEqY95HV8xJ2fUA7" target="_blank" rel="noopener">Mention it on your audit</a>, one custom connector is included in the standard sprint.</p>
   </div>
 </section>
 
@@ -857,15 +869,15 @@
       </details>
       <details>
         <summary>How does this compare to Harvey AI?</summary>
-        <p>Harvey is roughly $1,200 per seat per month and sells into AmLaw 200 firms. Claude for Legal is roughly $20 per seat per month &mdash; a 98 percent price collapse &mdash; and ships with native MCP connectors small firms can configure. Comparable reasoning. Different economics.</p>
+        <p>Harvey is roughly $1,200 per seat per month and sells into AmLaw 200 firms. Claude for Legal is roughly $20 per seat per month, a 98 percent price collapse, and ships with native MCP connectors small firms can configure. Comparable reasoning. Different economics.</p>
       </details>
       <details>
         <summary>Do we need to switch case management platforms?</summary>
-        <p>No. Claude reads from your existing Filevine, Clio, MyCase, or Litify through MCP connectors and writes back to the same matter. Nothing migrates. Your matter structure, billing codes, and retention policy stay where they are. We work inside Filevine, Clio, MyCase, or Litify. If you run something else, mention it on the audit &mdash; one custom connector is included in the standard sprint.</p>
+        <p>No. Claude reads from your existing Filevine, Clio, MyCase, or Litify through MCP connectors and writes back to the same matter. Nothing migrates. Your matter structure, billing codes, and retention policy stay where they are. We work inside Filevine, Clio, MyCase, or Litify. If you run something else, mention it on the audit, one custom connector is included in the standard sprint.</p>
       </details>
       <details>
         <summary>Does this connect to Filevine and Westlaw?</summary>
-        <p>Yes. Both ship as native MCP connectors. Filevine surfaces matters, contacts, and custom field data; Westlaw surfaces citations, KeyCite results, and case content. We combine them into playbooks &mdash; a Filevine-sourced demand letter, cite-checked against Westlaw, formatted to your template.</p>
+        <p>Yes. Both ship as native MCP connectors. Filevine surfaces matters, contacts, and custom field data; Westlaw surfaces citations, KeyCite results, and case content. We combine them into playbooks, a Filevine-sourced demand letter, cite-checked against Westlaw, formatted to your template.</p>
       </details>
       <details>
         <summary>How long does a configuration take?</summary>
@@ -893,7 +905,7 @@
     <div class="section-mark"></div>
     <h2 class="section-h">Bring one workflow. Leave with a written scope.</h2>
     <p class="section-sub">
-      Thirty minutes, on a video call. Pick a time that works &mdash; we reply within one business day.
+      Thirty minutes, on a video call. Pick a time that works, we reply within one business day.
     </p>
 
     <div class="book-foot">
@@ -934,6 +946,29 @@
             }
         });
     });
+</script>
+
+<!-- Rotate the "Works with" tool name in the hero eyebrow -->
+<script>
+  (function () {
+    var el = document.getElementById('tool-rotator');
+    if (!el) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var tools = ['Filevine', 'Clio', 'MyCase', 'Litify', 'iManage', 'NetDocuments',
+                 'Box', 'Westlaw', 'LexisNexis', 'Relativity', 'Everlaw',
+                 'DocuSign', 'Microsoft 365'];
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % tools.length;
+      var next = tools[idx];
+      el.classList.add('is-fading');
+      setTimeout(function () {
+        el.textContent = next;
+        el.classList.remove('is-fading');
+      }, 260);
+    }, 1900);
+  })();
 </script>
 
 <!-- Hero copy swap by cold-email pitch bucket (?utm_pitch=) -->
