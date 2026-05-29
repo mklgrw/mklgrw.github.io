@@ -520,7 +520,16 @@
     posthog.init('phc_nw96c37YfKzUNJXPJCf8eE5BgDKAuSkrhLrcvzyV47q2', {
         api_host: 'https://us.i.posthog.com',
         defaults: '2026-01-30',
-        person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+        person_profiles: 'always',          // profiles + person props for EVERY visitor, not just identified
+        autocapture: true,                  // auto-track all clicks, inputs, form submits
+        capture_pageview: true,             // track pageviews
+        capture_pageleave: true,            // track when they leave + time on page
+        capture_performance: true,          // web vitals + network performance
+        enable_heatmaps: true,              // click/scroll/rage-click heatmaps
+        session_recording: {
+            maskAllInputs: false,           // record input contents
+        },
+        disable_session_recording: false,   // enable replay (also flip it on in project settings)
     })
 </script>
 </head>
@@ -644,7 +653,7 @@
       <div class="config-row">
         <div class="num">03</div>
         <h3>Your team, trained on it</h3>
-        <p>One-page SOP per playbook plus a partner supervision SOP for sanction defense. Live training against a real matter from your firm. Versioned and yours to edit.</p>
+        <p>SOPs and live training to make sure your team knows how to use it.</p>
       </div>
     </div>
   </div>
