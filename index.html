@@ -6,23 +6,23 @@
 
 <!-- ============ SEO ============ -->
 <title>Claude for Legal · LayerTWO</title>
-<meta name="description" content="We configure Westlaw, DocuSign, iManage, and Microsoft 365 to run as one workflow for 5–30 attorney firms. Fixed fee. 3–5 days. Free audit.">
+<meta name="description" content="A privilege-safe second brain for your firm. We configure Claude into Westlaw, iManage, DocuSign, and Microsoft 365 — 5× the throughput, no new software to learn. Fixed fee. Free audit.">
 <link rel="canonical" href="https://layertwolab.com/">
 <link rel="icon" href="assets/Transparent.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/TransparentLogo.png">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Claude Configuration for how your firm works">
-<meta property="og:description" content="Four tools, one workflow. We wire your stack and build the playbooks. Fixed fee. Free audit.">
+<meta property="og:title" content="A second brain that knows every matter — and does the work of five">
+<meta property="og:description" content="Privilege-safe Claude, wired into Westlaw and iManage. 5× the throughput, no new software to learn. Fixed fee. Free audit.">
 <meta property="og:url" content="https://layertwolab.com/">
 <meta property="og:image" content="https://layertwolab.com/assets/Transparent.png">
 <meta property="og:site_name" content="LayerTWO">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Claude Configuration for how your firm works">
-<meta name="twitter:description" content="Four tools, one workflow. We wire your stack and build the playbooks. Fixed fee. Free audit.">
+<meta name="twitter:title" content="A second brain that knows every matter — and does the work of five">
+<meta name="twitter:description" content="Privilege-safe Claude, wired into Westlaw and iManage. 5× the throughput, no new software to learn. Fixed fee. Free audit.">
 <meta name="twitter:image" content="https://layertwolab.com/assets/Transparent.png">
 
 <!-- ============ Schema: Service ============ -->
@@ -35,7 +35,7 @@
   "provider": { "@type": "Organization", "name": "LayerTWO", "url": "https://layertwolab.com" },
   "areaServed": { "@type": "Country", "name": "United States" },
   "audience": { "@type": "Audience", "audienceType": "U.S. litigation firms, 5–30 attorneys" },
-  "description": "Configuration, connector setup, practice-specific playbooks, and paralegal training that wire Westlaw, iManage, DocuSign, and Microsoft 365 into one workflow.",
+  "description": "Configuration, connector setup, practice-specific playbooks, and paralegal training that turn Claude for Legal into a privilege-safe second brain wired into Westlaw, iManage, DocuSign, and Microsoft 365 — for 5x throughput with no new software to learn.",
   "offers": [
     { "@type": "Offer", "name": "Configuration sprint", "priceSpecification": { "@type": "PriceSpecification", "price": "1950", "priceCurrency": "USD" } },
     { "@type": "Offer", "name": "Ongoing retainer", "priceSpecification": { "@type": "UnitPriceSpecification", "minPrice": "150", "maxPrice": "1500", "priceCurrency": "USD", "unitText": "per month" } }
@@ -80,7 +80,10 @@
     { "@type": "Question", "name": "How long does a configuration take?", "acceptedAnswer": { "@type": "Answer", "text": "Three to five focused days, spread across one to three weeks. Day one: audit and connectors. Days two and three: playbooks. Day four: paralegal training against the SOPs. Day five: buffer for the issues that surface during the first paid matter." } },
     { "@type": "Question", "name": "What does the configuration cost?", "acceptedAnswer": { "@type": "Answer", "text": "Configuration sprint: a $1950 flat fee, confirmed during the free audit. The Anthropic license is separate (~$20 per attorney per month, billed by Anthropic). Ongoing retainer: $150 to $1,500 per month. 30-day cancellation. No lock-in." } },
     { "@type": "Question", "name": "How do we know LayerTWO can deliver?", "acceptedAnswer": { "@type": "Answer", "text": "We are pre-revenue and honest about it. First 5 firms get the configuration sprint at $1950 fixed + a free audit + a documented case study credit. If we don't deliver to the scope agreed during the audit, you don't pay." } },
-    { "@type": "Question", "name": "Is our data safe?", "acceptedAnswer": { "@type": "Answer", "text": "Anthropic's enterprise terms exclude your prompts and documents from model training, encrypt data in transit and at rest, and support zero-retention mode. MCP connectors respect folder-level permissions, including ethical walls. We document the access boundaries in the SOP we hand off." } }
+    { "@type": "Question", "name": "Is our data safe?", "acceptedAnswer": { "@type": "Answer", "text": "Anthropic's enterprise terms exclude your prompts and documents from model training, encrypt data in transit and at rest, and support zero-retention mode. MCP connectors respect folder-level permissions, including ethical walls. We document the access boundaries in the SOP we hand off." } },
+    { "@type": "Question", "name": "Isn't it a confidentiality problem to put client facts into AI?", "acceptedAnswer": { "@type": "Answer", "text": "It is on a consumer chatbot — which is exactly why most firms either avoid AI or strip the facts out of it. Claude for Legal runs under Anthropic's enterprise terms: your prompts and documents never train a model, data is zero-retention, and MCP connectors respect your ethical walls. The whole matter can go in. We document the access boundaries in the SOP we hand off, so you can show your carrier and your clients exactly where data goes." } },
+    { "@type": "Question", "name": "Do our attorneys have to learn new software?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your team works in the same chat interface they already use after hours — they just type what they need. There's no new platform to roll out, no logins to manage, and no adoption curve. The configuration is everything wired behind that chat box: your documents, your research, your templates, and your playbooks." } },
+    { "@type": "Question", "name": "What happens to the playbooks if we stop working with you?", "acceptedAnswer": { "@type": "Answer", "text": "They're yours. Every playbook is documented, versioned, and editable, and the retainer is month-to-month with 30-day cancellation — no annual contract and no seat license to LayerTWO. If you walk, the configuration and the playbooks keep working." } }
   ]
 }
 </script>
@@ -272,6 +275,89 @@
   }
   .pain-item p {
     font-size: 14.5px; line-height: 1.55; color: var(--fg-2); margin: 0;
+  }
+
+  /* ---------- Two pillars (main benefits) ---------- */
+  .pillars {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border-top: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .pillar {
+    padding: 48px 48px 48px 0;
+    display: flex; flex-direction: column;
+  }
+  .pillar:first-child {
+    border-right: 1px solid var(--border-soft);
+    padding-right: 48px;
+  }
+  .pillar:last-child { padding-left: 48px; padding-right: 0; }
+  .pillar-kicker {
+    font-family: var(--font-mono); font-size: 12px;
+    color: var(--brass-700); letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 18px;
+  }
+  .pillar h3 {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: clamp(28px, 3.2vw, 34px); line-height: 1.12;
+    letter-spacing: -0.02em; color: var(--fg-1);
+    margin: 0 0 18px; text-wrap: balance;
+  }
+  .pillar p {
+    font-size: 16.5px; line-height: 1.62; color: var(--fg-2); margin: 0;
+  }
+  .pillar-contrast {
+    margin-top: 28px; padding-top: 22px;
+    border-top: 1px solid var(--border-soft);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .pillar-contrast span {
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.01em;
+  }
+  .pillar-contrast .before { color: var(--fg-3); }
+  .pillar-contrast .after  { color: var(--brass-700); font-weight: 600; }
+  .pillar-proof {
+    margin-top: 28px; padding-top: 22px;
+    border-top: 1px solid var(--border-soft);
+  }
+  .pillar-proof .figures {
+    font-family: var(--font-mono); font-size: 13px;
+    color: var(--brass-700); font-weight: 600; letter-spacing: 0.01em;
+    line-height: 1.7;
+  }
+  .pillar-proof a {
+    display: inline-block; margin-top: 10px;
+    font-family: var(--font-mono); font-size: 12px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--fg-3); text-decoration: underline;
+    text-decoration-color: oklch(0.25 0.04 250 / 0.3); text-underline-offset: 3px;
+  }
+  .pillar-proof a:hover { color: var(--fg-1); }
+
+  /* ---------- Supporting benefits grid ---------- */
+  #benefits { background: var(--paper); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+  .benefit-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border-top: 1px solid var(--border-soft);
+    border-left: 1px solid var(--border-soft);
+  }
+  .benefit-card {
+    padding: 36px 36px 36px;
+    border-right: 1px solid var(--border-soft);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .benefit-card .kicker {
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--brass-700); letter-spacing: 0.14em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .benefit-card h3 {
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 23px; line-height: 1.22; letter-spacing: -0.01em;
+    color: var(--fg-1); margin: 0 0 12px; text-wrap: balance;
+  }
+  .benefit-card p {
+    font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0;
   }
 
   /* ---------- What we configure ---------- */
@@ -500,6 +586,12 @@
     .pain-list { grid-template-columns: 1fr; border-top: 0; }
     .pain-item { border-right: 0; border-bottom: 1px solid var(--border-soft); padding: 24px 0; }
     .pain-item:last-child { border-bottom: 0; }
+    .pillars { grid-template-columns: 1fr; }
+    .pillar { padding: 36px 0; }
+    .pillar:first-child { border-right: 0; border-bottom: 1px solid var(--border-soft); padding-right: 0; }
+    .pillar:last-child { padding-left: 0; }
+    .benefit-grid { grid-template-columns: 1fr; border-left: 0; }
+    .benefit-card { border-right: 0; padding: 28px 0; }
     .config-row { grid-template-columns: 60px 1fr; gap: 16px; }
     .config-row p { grid-column: span 2; }
     .steps { grid-template-columns: 1fr; gap: 48px; }
@@ -543,6 +635,7 @@
       <span class="brand-name">LayerTWO</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
+      <a href="#why">Why this works</a>
       <a href="#what">What we configure</a>
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
@@ -558,10 +651,10 @@
   <div class="container">
     <p class="hero-kicker">Works with <span class="rotator" id="tool-rotator">iManage</span></p>
     <h1 class="hero-h1" id="hero-h1">
-      Claude for Legal, configured for how <em>your firm</em> works.
+      A second brain that <em>knows every matter</em> — and does the work of five.
     </h1>
     <p class="hero-sub">
-      The demand letter that takes a paralegal half a day takes twenty minutes. The discovery review that eats a billable afternoon takes forty. We wire iManage, Westlaw, Word, and DocuSign into one workflow and build the playbooks your firm runs every day — so your team handles more matters without adding headcount. 
+      Claude for Legal, configured for your firm: privilege-safe, wired into Westlaw and iManage, 5&times; the throughput — and nothing new for your team to learn.
     </p>
 
     <div class="hero-ctas">
@@ -601,6 +694,59 @@
   </div>
 </section>
 
+<!-- ================== TWO PILLARS (main benefits) ================== -->
+<section id="why" aria-labelledby="why-h">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h" id="why-h">Two things change the day you turn it on.</h2>
+    <p class="section-sub">
+      Your attorneys get an AI they can finally trust with the whole matter — and the firm does five times the work without five times the people.
+    </p>
+    <div class="pillars">
+
+      <!-- PILLAR A · Benefit #1 — privilege-safe second brain -->
+      <!-- ===== SHARPENED-TONE ALTERNATE (swap in by replacing the <div class="pillar"> block below) =====
+      <div class="pillar">
+        <div class="pillar-kicker">01 &middot; The strategic partner</div>
+        <h3>Stop redacting your own AI.</h3>
+        <p>
+          Right now your associates are pasting privileged facts into ChatGPT after hours &mdash; or hobbling it by leaving them out. One is an ethics exposure your malpractice carrier is now asking about. The other wastes the tool. Claude for Legal runs under enterprise terms &mdash; zero retention, no training on your matters, ethical-wall-aware connectors &mdash; so the whole file goes in safely. The AI stops guessing and starts strategizing, because for the first time it's allowed to know the case.
+        </p>
+        <div class="pillar-contrast">
+          <span class="before">Today &middot; redacted prompts &rarr; generic answers</span>
+          <span class="after">Configured &middot; the full matter &rarr; real strategy</span>
+        </div>
+      </div>
+      ===== END SHARPENED-TONE ALTERNATE ===== -->
+      <div class="pillar">
+        <div class="pillar-kicker">01 &middot; The strategic partner</div>
+        <h3>An AI you can finally tell the whole story.</h3>
+        <p>
+          Your attorneys are already using AI. On a consumer chatbot, putting in the client's name, the settlement figure, the one bad fact is a confidentiality problem &mdash; so they either risk it or strip it out and get a generic answer. Claude for Legal runs under Anthropic's enterprise terms: prompts and documents never train a model, data is zero-retention, and connectors respect your ethical walls. The whole matter goes in. You get a partner that has read every document in the file.
+        </p>
+        <div class="pillar-contrast">
+          <span class="before">Today &middot; redacted prompts &rarr; generic answers</span>
+          <span class="after">Configured &middot; the full matter &rarr; real strategy</span>
+        </div>
+      </div>
+
+      <!-- PILLAR B · Benefit #2 — 5x throughput, same headcount -->
+      <div class="pillar">
+        <div class="pillar-kicker">02 &middot; The throughput</div>
+        <h3>Five times the work. The same headcount.</h3>
+        <p>
+          The demand letter that takes a paralegal half a day takes twenty minutes. The discovery review that eats a billable afternoon takes forty. We wire your stack and build the playbooks your firm runs every day &mdash; so the same team carries more matters, drafted from your files, cite-checked, formatted to your templates. Caseload grows without payroll growing.
+        </p>
+        <div class="pillar-proof">
+          <div class="figures">Demand letter 4.5&nbsp;hr &rarr; 20&nbsp;min &middot; Discovery review 9&nbsp;hr &rarr; 40&nbsp;min</div>
+          <a href="#compression">See the full breakdown &darr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ================== PAIN ================== -->
 <section id="problem" aria-labelledby="problem-h">
   <div class="container">
@@ -625,9 +771,65 @@
       <li class="pain-item">
         <div class="num">03</div>
         <h4>Your associates are drafting with ChatGPT.</h4>
-        <p>Without a firm-approved workflow or audit trail. Your malpractice carrier renewal now asks. 1,300 published sanctions in April 2026, up from 87 a year earlier.</p>
+        <p>In a consumer tool, with no privilege boundary and no audit trail — either leaking facts they shouldn't or stripping out the ones that matter. 1,300 published sanctions in April 2026, up from 87 a year earlier. Your malpractice carrier renewal now asks.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- ================== SUPPORTING BENEFITS ================== -->
+<section id="benefits" aria-labelledby="benefits-h">
+  <div class="container">
+    <div class="section-mark"></div>
+    <h2 class="section-h" id="benefits-h">And four reasons it holds up.</h2>
+    <p class="section-sub">
+      The throughput is the headline. These are the things that keep a managing partner comfortable signing off.
+    </p>
+    <div class="benefit-grid">
+
+      <!-- BENEFIT #3 · Prevent sanctions -->
+      <!-- ===== SHARPENED-TONE ALTERNATE (swap in by replacing the <div class="benefit-card"> block below) =====
+      <div class="benefit-card">
+        <div class="kicker">Cite-checked</div>
+        <h3>1,300 sanctions last April. Almost all from a made-up case.</h3>
+        <p>Published AI sanctions went from 87 to 1,300 in a year &mdash; nearly all from an AI inventing authority that was never real. Your filings don't get to gamble. Citations are pulled straight from Westlaw and KeyCited before they reach a draft. Real cases, good law, every time &mdash; with a trail to prove it.</p>
+      </div>
+      ===== END SHARPENED-TONE ALTERNATE ===== -->
+      <div class="benefit-card">
+        <div class="kicker">Cite-checked</div>
+        <h3>Every citation comes from Westlaw — not a hallucination.</h3>
+        <p>The sanctions headlines share one root cause: an AI inventing a case that doesn't exist. These workflows don't let the model free-associate authority — citations are pulled from Westlaw and run through KeyCite, so every cite in a draft is a real, good-law case, with an audit trail showing where it came from.</p>
+      </div>
+
+      <!-- BENEFIT #4 · No lock-in -->
+      <div class="benefit-card">
+        <div class="kicker">Yours to keep</div>
+        <h3>A setup, not a subscription.</h3>
+        <p>The configuration is a one-time fee. The optional retainer is month-to-month with 30-day cancellation — no annual contract, no seat license, no procurement cycle. The playbooks we build are documented and yours. If you ever walk, they keep working.</p>
+      </div>
+
+      <!-- BENEFIT #5 · No new software -->
+      <div class="benefit-card">
+        <div class="kicker">Day-one familiar</div>
+        <h3>Nothing new to learn. It's the chat box they already use.</h3>
+        <p>No new platform to roll out, no logins to manage, no six-week adoption curve. Your team works in the same chat interface they already use after hours — they just type what they need. The difference is everything wired behind it: your documents, your research, your templates, your playbooks.</p>
+      </div>
+
+      <!-- BENEFIT #6 · Knowledge base / talent retention -->
+      <!-- ===== SHARPENED-TONE ALTERNATE (swap in by replacing the <div class="benefit-card"> block below) =====
+      <div class="benefit-card">
+        <div class="kicker">Institutional memory</div>
+        <h3>When your best paralegal quits, the method quits too.</h3>
+        <p>The replacement takes six months to get good &mdash; because the firm's know-how was never written down. We capture how your firm actually works as documented, versioned playbooks the whole firm runs. Knowledge stops being a person and becomes an asset the firm owns. New hires bill in days.</p>
+      </div>
+      ===== END SHARPENED-TONE ALTERNATE ===== -->
+      <div class="benefit-card">
+        <div class="kicker">Institutional memory</div>
+        <h3>Capture the playbook before it walks out the door.</h3>
+        <p>How your best paralegal builds a demand letter, how your senior associate structures a depo summary — today that lives in one person's head and leaves when they do. We turn it into documented, versioned playbooks the whole firm runs. Turnover stops costing you the method, and a new hire is productive in days instead of months.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -652,8 +854,8 @@
       </div>
       <div class="config-row">
         <div class="num">03</div>
-        <h3>Your team, trained on it</h3>
-        <p>A one-page SOP for every workflow, plus live training on a real matter from your firm. Versioned, and yours to edit.</p>
+        <h3>Your playbook, written down</h3>
+        <p>A one-page SOP for every workflow — your firm's method captured as documented, versioned playbooks, not tribal knowledge in one person's head. Plus live training on a real matter from your firm. Yours to edit, yours to keep.</p>
       </div>
     </div>
   </div>
@@ -895,6 +1097,18 @@
       <details>
         <summary>Is our data safe?</summary>
         <p>Anthropic's enterprise terms exclude your prompts and documents from model training, encrypt data in transit and at rest, and support zero-retention mode. MCP connectors respect folder-level permissions, including ethical walls. We document the access boundaries in the SOP we hand off.</p>
+      </details>
+      <details>
+        <summary>Isn't it a confidentiality problem to put client facts into AI?</summary>
+        <p>It is on a consumer chatbot — which is exactly why most firms either avoid AI or strip the facts out of it. Claude for Legal runs under Anthropic's enterprise terms: your prompts and documents never train a model, data is zero-retention, and MCP connectors respect your ethical walls. The whole matter can go in. We document the access boundaries in the SOP we hand off, so you can show your carrier and your clients exactly where data goes.</p>
+      </details>
+      <details>
+        <summary>Do our attorneys have to learn new software?</summary>
+        <p>No. Your team works in the same chat interface they already use after hours — they just type what they need. There's no new platform to roll out, no logins to manage, and no adoption curve. The configuration is everything wired behind that chat box: your documents, your research, your templates, and your playbooks.</p>
+      </details>
+      <details>
+        <summary>What happens to the playbooks if we stop working with you?</summary>
+        <p>They're yours. Every playbook is documented, versioned, and editable, and the retainer is month-to-month with 30-day cancellation — no annual contract and no seat license to LayerTWO. If you walk, the configuration and the playbooks keep working.</p>
       </details>
     </div>
   </div>
